@@ -1,11 +1,11 @@
+import * as fs from 'fs';
 import { Hono } from 'hono';
 import { cache } from 'hono/cache';
-import { KintetsuParser } from '../parsers/kintetsu';
-import * as fs from 'fs';
 import * as path from 'path';
 import { parseJR } from '../parsers/jr';
+import { KintetsuParser } from '../parsers/kintetsu';
 import { DataCache } from '../utils/cache';
-import { loadConfig, ensureDirectoryExists } from '../utils/config';
+import { ensureDirectoryExists, loadConfig } from '../utils/config';
 
 const app = new Hono();
 const config = loadConfig();
@@ -47,11 +47,11 @@ async function fetchKintetsuData() {
 
     const parser = new KintetsuParser();
     const result = await parser.parseUrls(kintetsuConfig.urls);
-    
+
     // ファイルにも保存
     const outputPath = path.join(outputDir, 'kintetsu-train.json');
     fs.writeFileSync(outputPath, JSON.stringify(result, null, 2), 'utf-8');
-    
+
     return result;
   } catch (error) {
     console.error('近鉄データの取得に失敗しました:', error);
@@ -101,7 +101,7 @@ app.get('/api/all', cache({ cacheName: 'all-api', cacheControl: 'max-age=3600' }
     dataCache.get('kintetsu', fetchKintetsuData),
     dataCache.get('jr', fetchJRData)
   ]);
-  
+
   return c.json({
     kintetsu,
     jr,

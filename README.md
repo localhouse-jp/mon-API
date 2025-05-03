@@ -26,6 +26,10 @@ research-kindai/
 │   ├── parsers/          # パーサーのコード
 │   │   ├── jr.ts         # JRのパーサー実装
 │   │   └── kintetsu.ts   # 近鉄パーサー実装
+│   ├── scripts/          # 実行スクリプト
+│   │   └── generate-json.ts  # JSONファイル生成スクリプト
+│   ├── types/            # 型定義ファイル
+│   │   └── index.ts      # 共通型定義
 │   ├── utils/            # ユーティリティ関数
 │   │   ├── cache.ts      # キャッシュユーティリティ
 │   │   └── config.ts     # 設定読み込みユーティリティ
@@ -63,6 +67,23 @@ bun run src/index.ts
 ```
 
 サーバーはデフォルトで http://localhost:3000 で起動します。
+
+### JSONファイルの直接生成
+
+APIサーバーを起動せずに、時刻表データのJSONファイルを直接生成することもできます：
+
+```bash
+# すべての鉄道会社のJSONファイルを生成
+bun run src/scripts/generate-json.ts
+
+# 特定の鉄道会社のみ生成
+bun run src/scripts/generate-json.ts kintetsu  # 近鉄のデータのみ
+bun run src/scripts/generate-json.ts jr        # JRのデータのみ
+```
+
+生成されるJSONファイルは `dist` ディレクトリに保存されます：
+- `dist/kintetsu-train.json` - 近鉄の時刻表データ
+- `dist/jr-train.json` - JRの時刻表データ
 
 ### 環境変数
 
@@ -104,18 +125,3 @@ curl -X POST http://localhost:3000/api/cache/clear -H "Content-Type: application
 }
 ```
 
-## 拡張方法
-
-### 新しいパーサーの追加
-
-1. `src/parsers/` ディレクトリに新しいパーサーファイルを作成
-2. `TimetableEntry` インターフェースに準拠した実装を行う
-3. `src/api/routes.ts` ファイルに新しいパーサーのエンドポイントを追加
-
-## ライセンス
-
-MIT
-
-## 注意事項
-
-このプロジェクトは学習・研究目的で作成されています。各鉄道会社の時刻表データの利用については、各社の利用規約を確認してください。過度なリクエストを送信しないよう、適切なキャッシュ設定を行ってください。

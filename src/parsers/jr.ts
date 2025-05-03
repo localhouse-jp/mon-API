@@ -4,8 +4,8 @@
 import * as cheerio from 'cheerio';
 import * as fs from 'fs';
 import * as path from 'path';
-import { ensureDirectoryExists } from '../utils/config';
 import { TimetableEntry } from '../types';
+import { ensureDirectoryExists } from '../utils/config';
 
 interface StationTimetables {
   [directionName: string]: TimetableEntry[];
@@ -93,6 +93,6 @@ export async function parseJR() {
   const outputPath = path.join(outputDir, 'jr-train.json');
   fs.writeFileSync(outputPath, JSON.stringify(allResults, null, 2), 'utf-8');
   console.log(`JRの結果を ${outputPath} に出力しました`);
-  
+
   return allResults;
 }

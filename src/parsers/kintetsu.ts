@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 import * as iconv from 'iconv-lite';
-import { TimetableParser, TimetableEntry, StationResult, ParserResult } from '../types';
+import { ParserResult, StationResult, TimetableEntry, TimetableParser } from '../types';
 
 export class KintetsuParser implements TimetableParser {
   name = 'kintetsu';
