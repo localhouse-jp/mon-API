@@ -1,10 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-/**
- * 設定ファイルを読み込む関数
- * @returns 設定ファイルの内容
- */
 export function loadConfig() {
   try {
     const configPath = path.join(__dirname, '../../src/config/config.json');
@@ -16,7 +12,6 @@ export function loadConfig() {
     console.error('設定ファイルの読み込みに失敗しました:', err);
   }
 
-  // デフォルト設定
   return {
     parsers: [
       {
@@ -31,10 +26,6 @@ export function loadConfig() {
   };
 }
 
-/**
- * 出力ディレクトリを確保
- * @param dir ディレクトリパス
- */
 export function ensureDirectoryExists(dir: string): void {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });

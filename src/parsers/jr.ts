@@ -1,6 +1,3 @@
-// 必要パッケージのインストール
-// bun add cheerio
-
 import * as cheerio from 'cheerio';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -11,20 +8,13 @@ interface StationTimetables {
   [directionName: string]: TimetableEntry[];
 }
 
-// 略称から正式名称へのマッピング
 const destinationMap: Record<string, string> = {
   '放': '放出',
   '大': '大阪',
   '久': '久宝寺',
   '奈': '奈良',
-  // 必要に応じて他の略称も追加
 };
 
-/**
- * JRおでかけネット 駅時刻表を取得して JSON 生成
- * @param url 駅時刻表ページ URL
- * @returns 駅名とその各方面の時刻表リスト
- */
 async function fetchStationTimetable(url: string): Promise<{ stationName: string; timetables: StationTimetables }> {
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
@@ -32,20 +22,17 @@ async function fetchStationTimetable(url: string): Promise<{ stationName: string
   const html = await res.text();
   const $ = cheerio.load(html);
 
-  // 駅名・方向名
   const stationName = $('.route-name01').text().trim();
   const directionName = $('.route-name03').text().trim();
 
   const entries: TimetableEntry[] = [];
 
-  // PC版時刻表 tbody tr.body-row をループ
   $('.pc-time-tbl-wrap table tbody tr.body-row').each((_, row) => {
     const hour = $(row).find('td.hour').text().trim();
     $(row).find('td.minutes .minute-item').each((_, item) => {
       const $item = $(item);
       const minute = $item.find('.minute-box .minute').text().trim();
       let destination = $item.find('.minute-box .destination').text().trim();
-      // 略称を正式名称に置換
       if (destinationMap[destination]) {
         destination = destinationMap[destination];
       }
@@ -59,9 +46,6 @@ async function fetchStationTimetable(url: string): Promise<{ stationName: string
   return { stationName, timetables: { [directionName]: entries } };
 }
 
-/**
- * JRパーサーのエントリーポイント
- */
 export async function parseJR() {
   const urls = [
     'https://timetable.jr-odekake.net/station-timetable/8220073001', // 放出・新大阪・大阪方面
@@ -71,7 +55,6 @@ export async function parseJR() {
   const allResults: Record<string, StationTimetables> = {};
   const outputDir = './dist';
 
-  // 出力ディレクトリを確保
   ensureDirectoryExists(outputDir);
 
   for (const url of urls) {
@@ -80,7 +63,6 @@ export async function parseJR() {
       if (!allResults[stationName]) {
         allResults[stationName] = {};
       }
-      // マージ
       Object.entries(timetables).forEach(([dir, list]) => {
         allResults[stationName][dir] = list;
       });
@@ -89,7 +71,6 @@ export async function parseJR() {
     }
   }
 
-  // 結果をファイルに書き込み
   const outputPath = path.join(outputDir, 'jr-train.json');
   fs.writeFileSync(outputPath, JSON.stringify(allResults, null, 2), 'utf-8');
   console.log(`JRの結果を ${outputPath} に出力しました`);

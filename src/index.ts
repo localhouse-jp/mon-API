@@ -3,19 +3,14 @@ import { Hono } from 'hono';
 import { serveStatic } from 'hono/bun';
 import apiRoutes, { initRoutes } from './api/routes';
 
-// サーバー設定
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
-// メインアプリ
 const app = new Hono();
 
-// API ルートをマウント
 app.route('/', apiRoutes);
 
-// 静的ファイル
 app.use('/static/*', serveStatic({ root: './public' }));
 
-// フロントエンドのインデックスページ
 app.get('/', async (c) => {
   return c.html(`
     <!DOCTYPE html>
@@ -56,12 +51,10 @@ app.get('/', async (c) => {
   `);
 });
 
-// サーバー起動
 console.log(`サーバーを起動します：http://localhost:${PORT}`);
 serve({
   fetch: app.fetch,
   port: PORT
 });
 
-// APIルートを初期化（キャッシュ準備）
 initRoutes();

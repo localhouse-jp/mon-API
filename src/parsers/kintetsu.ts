@@ -18,9 +18,6 @@ export class KintetsuParser implements TimetableParser {
     return result;
   }
 
-  /**
-   * 詳細時刻表を取得し、方向名とエントリ配列を返す
-   */
   private async fetchDirection(
     baseUrl: string,
     slCode: string,
@@ -72,13 +69,9 @@ export class KintetsuParser implements TimetableParser {
     return { directionName, entries };
   }
 
-  /**
-   * 駅ページから駅名と時刻表をまとめて取得
-   */
   private async fetchStationTimetable(
     initialUrl: string
   ): Promise<{ stationName: string; timetables: StationResult }> {
-    // 詳細モードで取得
     const url = new URL(initialUrl);
     url.searchParams.set('dmode', 'detail');
     url.searchParams.set('pFlg', '0');

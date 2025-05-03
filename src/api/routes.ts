@@ -12,17 +12,14 @@ const config = loadConfig();
 const outputDir = config.outputDir || './dist';
 ensureDirectoryExists(outputDir);
 
-// メモリ内キャッシュ（1時間有効）
 const CACHE_VALIDITY_MS = process.env.CACHE_VALIDITY_MS ? parseInt(process.env.CACHE_VALIDITY_MS) : 60 * 60 * 1000;
 const dataCache = new DataCache(CACHE_VALIDITY_MS);
 
-// JRデータの取得
 async function fetchJRData() {
   try {
     return await parseJR();
   } catch (error) {
     console.error('JRデータの取得に失敗しました:', error);
-    // ファイルから読み込む
     try {
       const jrFilePath = path.join(outputDir, 'jr-train.json');
       if (fs.existsSync(jrFilePath)) {
@@ -36,7 +33,6 @@ async function fetchJRData() {
   }
 }
 
-// 近鉄データの取得
 async function fetchKintetsuData() {
   try {
     const kintetsuConfig = config.parsers.find(p => p.name.toLowerCase() === 'kintetsu');
@@ -48,14 +44,12 @@ async function fetchKintetsuData() {
     const parser = new KintetsuParser();
     const result = await parser.parseUrls(kintetsuConfig.urls);
 
-    // ファイルにも保存
     const outputPath = path.join(outputDir, 'kintetsu-train.json');
     fs.writeFileSync(outputPath, JSON.stringify(result, null, 2), 'utf-8');
 
     return result;
   } catch (error) {
     console.error('近鉄データの取得に失敗しました:', error);
-    // ファイルから読み込む
     try {
       const kintetsuFilePath = path.join(outputDir, 'kintetsu-train.json');
       if (fs.existsSync(kintetsuFilePath)) {
@@ -69,7 +63,6 @@ async function fetchKintetsuData() {
   }
 }
 
-// キャッシュ付きミドルウェア
 app.use('*', async (c, next) => {
   const start = Date.now();
   await next();
@@ -77,7 +70,6 @@ app.use('*', async (c, next) => {
   console.log(`${c.req.method} ${c.req.url} - ${end - start}ms`);
 });
 
-// APIルート - 近鉄データ
 app.get('/api/kintetsu', cache({ cacheName: 'kintetsu-api', cacheControl: 'max-age=3600' }), async (c) => {
   const data = await dataCache.get('kintetsu', fetchKintetsuData);
   if (!data) {
@@ -86,7 +78,6 @@ app.get('/api/kintetsu', cache({ cacheName: 'kintetsu-api', cacheControl: 'max-a
   return c.json(data);
 });
 
-// APIルート - JRデータ
 app.get('/api/jr', cache({ cacheName: 'jr-api', cacheControl: 'max-age=3600' }), async (c) => {
   const data = await dataCache.get('jr', fetchJRData);
   if (!data) {
@@ -95,7 +86,6 @@ app.get('/api/jr', cache({ cacheName: 'jr-api', cacheControl: 'max-age=3600' }),
   return c.json(data);
 });
 
-// APIルート - すべてのデータ
 app.get('/api/all', cache({ cacheName: 'all-api', cacheControl: 'max-age=3600' }), async (c) => {
   const [kintetsu, jr] = await Promise.all([
     dataCache.get('kintetsu', fetchKintetsuData),
@@ -109,7 +99,6 @@ app.get('/api/all', cache({ cacheName: 'all-api', cacheControl: 'max-age=3600' }
   });
 });
 
-// キャッシュクリアエンドポイント（管理者用）
 app.post('/api/cache/clear', async (c) => {
   const { key } = await c.req.json();
   if (key) {
@@ -121,9 +110,7 @@ app.post('/api/cache/clear', async (c) => {
   }
 });
 
-// ルートの初期化機能
 export function initRoutes() {
-  // 起動時に一度取得してキャッシュを温める
   setTimeout(() => {
     console.log('初期データを取得中...');
     Promise.all([

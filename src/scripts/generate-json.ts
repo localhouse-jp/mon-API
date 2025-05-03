@@ -1,17 +1,9 @@
-/**
- * JSONファイル生成スクリプト
- * 
- * このスクリプトは鉄道会社のパーサーを実行し、JSONファイルを生成するだけの機能を提供します。
- * サーバーを起動せずに時刻表データを更新したい場合に使用します。
- */
-
 import * as fs from 'fs';
 import * as path from 'path';
 import { parseJR } from '../parsers/jr';
 import { KintetsuParser } from '../parsers/kintetsu';
 import { ensureDirectoryExists, loadConfig } from '../utils/config';
 
-// コマンドライン引数を処理
 const args = process.argv.slice(2);
 const targetParser = args[0]?.toLowerCase();
 
@@ -22,7 +14,6 @@ async function main() {
 
   console.log('JSONファイル生成を開始します...');
 
-  // 特定のパーサーが指定されていない場合は全てのパーサーを実行
   if (!targetParser || targetParser === 'all') {
     await generateAllJson(outputDir, config);
   } else if (targetParser === 'kintetsu') {
@@ -36,12 +27,8 @@ async function main() {
   }
 }
 
-/**
- * 全てのパーサーを実行してJSONファイルを生成
- */
 async function generateAllJson(outputDir: string, config: any) {
   try {
-    // 並列実行
     await Promise.all([
       generateKintetsuJson(outputDir, config),
       generateJRJson(outputDir)
@@ -52,9 +39,6 @@ async function generateAllJson(outputDir: string, config: any) {
   }
 }
 
-/**
- * 近鉄パーサーを実行してJSONファイルを生成
- */
 async function generateKintetsuJson(outputDir: string, config: any) {
   try {
     console.log('近鉄時刻表データの取得を開始...');
@@ -78,9 +62,6 @@ async function generateKintetsuJson(outputDir: string, config: any) {
   }
 }
 
-/**
- * JRパーサーを実行してJSONファイルを生成
- */
 async function generateJRJson(outputDir: string) {
   try {
     console.log('JR時刻表データの取得を開始...');
@@ -93,7 +74,6 @@ async function generateJRJson(outputDir: string) {
   }
 }
 
-// スクリプト実行
 main().catch(err => {
   console.error('エラーが発生しました:', err);
   process.exit(1);
