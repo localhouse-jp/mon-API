@@ -1,0 +1,2979 @@
+fetchStationTimetable: https://eki.kintetsu.co.jp/norikae/T5?USR=PC&slCode=356-5&d=1&dw=0
+  initial status: 200
+  raw station name: 
+  stationName: 
+  option: slCode=356-5, d=1, name=大阪線 大阪上本町方面
+  option: slCode=356-5, d=2, name=大阪線 河内国分方面
+--> direction: 大阪線 大阪上本町方面
+→ fetchDirection: slCode=356-5, d=1, dw=0
+  status: 200
+  raw header: 大阪上本町方面 平日のダイヤ
+  directionName: 大阪上本町方面
+  parsed entries: 97
+→ fetchDirection: slCode=356-5, d=1, dw=1
+  status: 200
+  raw header: 大阪上本町方面 土休日のダイヤ
+  directionName: 大阪上本町方面
+  parsed entries: 88
+--> direction: 大阪線 河内国分方面
+→ fetchDirection: slCode=356-5, d=2, dw=0
+  status: 200
+  raw header: 河内国分方面 平日のダイヤ
+  directionName: 河内国分方面
+  parsed entries: 100
+→ fetchDirection: slCode=356-5, d=2, dw=1
+  status: 200
+  raw header: 河内国分方面 土休日のダイヤ
+  directionName: 河内国分方面
+  parsed entries: 90
+completed station: , directions: 大阪線 大阪上本町方面, 大阪線 河内国分方面
+fetchStationTimetable: https://eki.kintetsu.co.jp/norikae/T5?USR=PC&slCode=350-8&d=1&dw=0
+  initial status: 200
+  raw station name: 
+  stationName: 
+  option: slCode=350-8, d=1, name=奈良線 大阪難波・尼崎(阪神)方面
+  option: slCode=350-8, d=2, name=奈良線 近鉄奈良方面
+--> direction: 奈良線 大阪難波・尼崎(阪神)方面
+→ fetchDirection: slCode=350-8, d=1, dw=0
+  status: 200
+  raw header: 大阪難波・尼崎(阪神)方面 平日のダイヤ
+  directionName: 大阪難波・尼崎(阪神)方面
+  parsed entries: 107
+→ fetchDirection: slCode=350-8, d=1, dw=1
+  status: 200
+  raw header: 大阪難波・尼崎(阪神)方面 土休日のダイヤ
+  directionName: 大阪難波・尼崎(阪神)方面
+  parsed entries: 102
+--> direction: 奈良線 近鉄奈良方面
+→ fetchDirection: slCode=350-8, d=2, dw=0
+  status: 200
+  raw header: 近鉄奈良方面 平日のダイヤ
+  directionName: 近鉄奈良方面
+  parsed entries: 105
+→ fetchDirection: slCode=350-8, d=2, dw=1
+  status: 200
+  raw header: 近鉄奈良方面 土休日のダイヤ
+  directionName: 近鉄奈良方面
+  parsed entries: 101
+completed station: , directions: 奈良線 大阪難波・尼崎(阪神)方面, 奈良線 近鉄奈良方面
+{
+  "": {
+    "奈良線 大阪難波・尼崎(阪神)方面": {
+      "weekday": [
+        {
+          "hour": "5",
+          "minute": "07",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-2&dw=0&time=0500"
+        },
+        {
+          "hour": "5",
+          "minute": "21",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-418&dw=0&time=0520"
+        },
+        {
+          "hour": "5",
+          "minute": "33",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-177&dw=0&time=0530"
+        },
+        {
+          "hour": "5",
+          "minute": "49",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-175&dw=0&time=0540"
+        },
+        {
+          "hour": "6",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-183&dw=0&time=0600"
+        },
+        {
+          "hour": "6",
+          "minute": "12",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-174&dw=0&time=0610"
+        },
+        {
+          "hour": "6",
+          "minute": "24",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-179&dw=0&time=0620"
+        },
+        {
+          "hour": "6",
+          "minute": "37",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-173&dw=0&time=0630"
+        },
+        {
+          "hour": "6",
+          "minute": "48",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5&dw=0&time=0640"
+        },
+        {
+          "hour": "6",
+          "minute": "59",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-3&dw=0&time=0650"
+        },
+        {
+          "hour": "7",
+          "minute": "06",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-9&dw=0&time=0700"
+        },
+        {
+          "hour": "7",
+          "minute": "17",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-13&dw=0&time=0710"
+        },
+        {
+          "hour": "7",
+          "minute": "30",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-17&dw=0&time=0730"
+        },
+        {
+          "hour": "7",
+          "minute": "40",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-110&dw=0&time=0740"
+        },
+        {
+          "hour": "7",
+          "minute": "50",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-503&dw=0&time=0750"
+        },
+        {
+          "hour": "8",
+          "minute": "02",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-407&dw=0&time=0800"
+        },
+        {
+          "hour": "8",
+          "minute": "10",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-475&dw=0&time=0810"
+        },
+        {
+          "hour": "8",
+          "minute": "18",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-30&dw=0&time=0810"
+        },
+        {
+          "hour": "8",
+          "minute": "30",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-4&dw=0&time=0830"
+        },
+        {
+          "hour": "8",
+          "minute": "41",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-121&dw=0&time=0840"
+        },
+        {
+          "hour": "8",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-29&dw=0&time=0850"
+        },
+        {
+          "hour": "9",
+          "minute": "04",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-180&dw=0&time=0900"
+        },
+        {
+          "hour": "9",
+          "minute": "18",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-28&dw=0&time=0910"
+        },
+        {
+          "hour": "9",
+          "minute": "26",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-391&dw=0&time=0920"
+        },
+        {
+          "hour": "9",
+          "minute": "41",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-390&dw=0&time=0940"
+        },
+        {
+          "hour": "9",
+          "minute": "54",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-32&dw=0&time=0950"
+        },
+        {
+          "hour": "10",
+          "minute": "02",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-487&dw=0&time=1000"
+        },
+        {
+          "hour": "10",
+          "minute": "13",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-176&dw=0&time=1010"
+        },
+        {
+          "hour": "10",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-490&dw=0&time=1020"
+        },
+        {
+          "hour": "10",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-12&dw=0&time=1030"
+        },
+        {
+          "hour": "10",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-433&dw=0&time=1040"
+        },
+        {
+          "hour": "10",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-19&dw=0&time=1050"
+        },
+        {
+          "hour": "11",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-477&dw=0&time=1100"
+        },
+        {
+          "hour": "11",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-411&dw=0&time=1110"
+        },
+        {
+          "hour": "11",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-484&dw=0&time=1120"
+        },
+        {
+          "hour": "11",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10&dw=0&time=1130"
+        },
+        {
+          "hour": "11",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-485&dw=0&time=1140"
+        },
+        {
+          "hour": "11",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-11&dw=0&time=1150"
+        },
+        {
+          "hour": "12",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-434&dw=0&time=1200"
+        },
+        {
+          "hour": "12",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-20&dw=0&time=1210"
+        },
+        {
+          "hour": "12",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-480&dw=0&time=1220"
+        },
+        {
+          "hour": "12",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-23&dw=0&time=1230"
+        },
+        {
+          "hour": "12",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-476&dw=0&time=1240"
+        },
+        {
+          "hour": "12",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-22&dw=0&time=1250"
+        },
+        {
+          "hour": "13",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-483&dw=0&time=1300"
+        },
+        {
+          "hour": "13",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-14&dw=0&time=1310"
+        },
+        {
+          "hour": "13",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-481&dw=0&time=1320"
+        },
+        {
+          "hour": "13",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-394&dw=0&time=1330"
+        },
+        {
+          "hour": "13",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-432&dw=0&time=1340"
+        },
+        {
+          "hour": "13",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-16&dw=0&time=1350"
+        },
+        {
+          "hour": "14",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-486&dw=0&time=1400"
+        },
+        {
+          "hour": "14",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-27&dw=0&time=1410"
+        },
+        {
+          "hour": "14",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-479&dw=0&time=1420"
+        },
+        {
+          "hour": "14",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-7&dw=0&time=1430"
+        },
+        {
+          "hour": "14",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-478&dw=0&time=1440"
+        },
+        {
+          "hour": "14",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6&dw=0&time=1450"
+        },
+        {
+          "hour": "15",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-489&dw=0&time=1500"
+        },
+        {
+          "hour": "15",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-15&dw=0&time=1510"
+        },
+        {
+          "hour": "15",
+          "minute": "20",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-112&dw=0&time=1520"
+        },
+        {
+          "hour": "15",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-405&dw=0&time=1530"
+        },
+        {
+          "hour": "15",
+          "minute": "40",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-117&dw=0&time=1540"
+        },
+        {
+          "hour": "15",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-392&dw=0&time=1550"
+        },
+        {
+          "hour": "16",
+          "minute": "00",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-393&dw=0&time=1600"
+        },
+        {
+          "hour": "16",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-408&dw=0&time=1610"
+        },
+        {
+          "hour": "16",
+          "minute": "20",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-114&dw=0&time=1620"
+        },
+        {
+          "hour": "16",
+          "minute": "31",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-26&dw=0&time=1630"
+        },
+        {
+          "hour": "16",
+          "minute": "43",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-111&dw=0&time=1640"
+        },
+        {
+          "hour": "16",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-398&dw=0&time=1650"
+        },
+        {
+          "hour": "17",
+          "minute": "03",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-118&dw=0&time=1700"
+        },
+        {
+          "hour": "17",
+          "minute": "12",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-397&dw=0&time=1710"
+        },
+        {
+          "hour": "17",
+          "minute": "21",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-109&dw=0&time=1720"
+        },
+        {
+          "hour": "17",
+          "minute": "34",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-535&dw=0&time=1730"
+        },
+        {
+          "hour": "17",
+          "minute": "41",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-119&dw=0&time=1740"
+        },
+        {
+          "hour": "17",
+          "minute": "52",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-396&dw=0&time=1750"
+        },
+        {
+          "hour": "18",
+          "minute": "01",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-115&dw=0&time=1800"
+        },
+        {
+          "hour": "18",
+          "minute": "12",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-506&dw=0&time=1810"
+        },
+        {
+          "hour": "18",
+          "minute": "22",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-402&dw=0&time=1820"
+        },
+        {
+          "hour": "18",
+          "minute": "32",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-120&dw=0&time=1830"
+        },
+        {
+          "hour": "18",
+          "minute": "42",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-113&dw=0&time=1840"
+        },
+        {
+          "hour": "18",
+          "minute": "52",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-509&dw=0&time=1850"
+        },
+        {
+          "hour": "19",
+          "minute": "02",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-400&dw=0&time=1900"
+        },
+        {
+          "hour": "19",
+          "minute": "12",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-508&dw=0&time=1910"
+        },
+        {
+          "hour": "19",
+          "minute": "22",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-404&dw=0&time=1920"
+        },
+        {
+          "hour": "19",
+          "minute": "32",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-505&dw=0&time=1930"
+        },
+        {
+          "hour": "19",
+          "minute": "42",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-401&dw=0&time=1940"
+        },
+        {
+          "hour": "19",
+          "minute": "46",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-181&dw=0&time=1940"
+        },
+        {
+          "hour": "19",
+          "minute": "54",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-507&dw=0&time=1950"
+        },
+        {
+          "hour": "20",
+          "minute": "05",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-403&dw=0&time=2000"
+        },
+        {
+          "hour": "20",
+          "minute": "15",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-511&dw=0&time=2010"
+        },
+        {
+          "hour": "20",
+          "minute": "28",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-504&dw=0&time=2020"
+        },
+        {
+          "hour": "20",
+          "minute": "40",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-406&dw=0&time=2040"
+        },
+        {
+          "hour": "20",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-31&dw=0&time=2050"
+        },
+        {
+          "hour": "21",
+          "minute": "01",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-510&dw=0&time=2100"
+        },
+        {
+          "hour": "21",
+          "minute": "12",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-8&dw=0&time=2110"
+        },
+        {
+          "hour": "21",
+          "minute": "24",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-410&dw=0&time=2120"
+        },
+        {
+          "hour": "21",
+          "minute": "36",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-18&dw=0&time=2130"
+        },
+        {
+          "hour": "21",
+          "minute": "48",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-25&dw=0&time=2140"
+        },
+        {
+          "hour": "21",
+          "minute": "59",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-182&dw=0&time=2150"
+        },
+        {
+          "hour": "22",
+          "minute": "14",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-24&dw=0&time=2210"
+        },
+        {
+          "hour": "22",
+          "minute": "28",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-395&dw=0&time=2220"
+        },
+        {
+          "hour": "22",
+          "minute": "36",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-488&dw=0&time=2230"
+        },
+        {
+          "hour": "22",
+          "minute": "48",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-178&dw=0&time=2240"
+        },
+        {
+          "hour": "22",
+          "minute": "58",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-399&dw=0&time=2250"
+        },
+        {
+          "hour": "23",
+          "minute": "12",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-409&dw=0&time=2310"
+        },
+        {
+          "hour": "23",
+          "minute": "27",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-21&dw=0&time=2320"
+        },
+        {
+          "hour": "23",
+          "minute": "37",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-116&dw=0&time=2330"
+        },
+        {
+          "hour": "23",
+          "minute": "49",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-482&dw=0&time=2340"
+        }
+      ],
+      "holiday": [
+        {
+          "hour": "5",
+          "minute": "07",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5661&dw=1&time=0500"
+        },
+        {
+          "hour": "5",
+          "minute": "21",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6048&dw=1&time=0520"
+        },
+        {
+          "hour": "5",
+          "minute": "37",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5846&dw=1&time=0530"
+        },
+        {
+          "hour": "5",
+          "minute": "51",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5832&dw=1&time=0550"
+        },
+        {
+          "hour": "6",
+          "minute": "08",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5842&dw=1&time=0600"
+        },
+        {
+          "hour": "6",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5841&dw=1&time=0620"
+        },
+        {
+          "hour": "6",
+          "minute": "34",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5831&dw=1&time=0630"
+        },
+        {
+          "hour": "6",
+          "minute": "46",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5848&dw=1&time=0640"
+        },
+        {
+          "hour": "7",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5833&dw=1&time=0700"
+        },
+        {
+          "hour": "7",
+          "minute": "13",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6115&dw=1&time=0710"
+        },
+        {
+          "hour": "7",
+          "minute": "29",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5844&dw=1&time=0720"
+        },
+        {
+          "hour": "7",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5836&dw=1&time=0740"
+        },
+        {
+          "hour": "7",
+          "minute": "50",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5838&dw=1&time=0750"
+        },
+        {
+          "hour": "8",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5834&dw=1&time=0800"
+        },
+        {
+          "hour": "8",
+          "minute": "09",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5839&dw=1&time=0800"
+        },
+        {
+          "hour": "8",
+          "minute": "21",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5835&dw=1&time=0820"
+        },
+        {
+          "hour": "8",
+          "minute": "30",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5840&dw=1&time=0830"
+        },
+        {
+          "hour": "8",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5837&dw=1&time=0840"
+        },
+        {
+          "hour": "8",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5663&dw=1&time=0850"
+        },
+        {
+          "hour": "9",
+          "minute": "01",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6137&dw=1&time=0900"
+        },
+        {
+          "hour": "9",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5664&dw=1&time=0910"
+        },
+        {
+          "hour": "9",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6116&dw=1&time=0920"
+        },
+        {
+          "hour": "9",
+          "minute": "32",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5669&dw=1&time=0930"
+        },
+        {
+          "hour": "9",
+          "minute": "41",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6066&dw=1&time=0940"
+        },
+        {
+          "hour": "9",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5668&dw=1&time=0950"
+        },
+        {
+          "hour": "10",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6065&dw=1&time=1000"
+        },
+        {
+          "hour": "10",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5667&dw=1&time=1010"
+        },
+        {
+          "hour": "10",
+          "minute": "18",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6136&dw=1&time=1010"
+        },
+        {
+          "hour": "10",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5666&dw=1&time=1030"
+        },
+        {
+          "hour": "10",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6117&dw=1&time=1040"
+        },
+        {
+          "hour": "10",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5670&dw=1&time=1050"
+        },
+        {
+          "hour": "11",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6118&dw=1&time=1100"
+        },
+        {
+          "hour": "11",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5671&dw=1&time=1110"
+        },
+        {
+          "hour": "11",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6119&dw=1&time=1120"
+        },
+        {
+          "hour": "11",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5672&dw=1&time=1130"
+        },
+        {
+          "hour": "11",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6120&dw=1&time=1140"
+        },
+        {
+          "hour": "11",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5673&dw=1&time=1150"
+        },
+        {
+          "hour": "12",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6121&dw=1&time=1200"
+        },
+        {
+          "hour": "12",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5674&dw=1&time=1210"
+        },
+        {
+          "hour": "12",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6122&dw=1&time=1220"
+        },
+        {
+          "hour": "12",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5675&dw=1&time=1230"
+        },
+        {
+          "hour": "12",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6135&dw=1&time=1240"
+        },
+        {
+          "hour": "12",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5676&dw=1&time=1250"
+        },
+        {
+          "hour": "13",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6123&dw=1&time=1300"
+        },
+        {
+          "hour": "13",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5677&dw=1&time=1310"
+        },
+        {
+          "hour": "13",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6124&dw=1&time=1320"
+        },
+        {
+          "hour": "13",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5678&dw=1&time=1330"
+        },
+        {
+          "hour": "13",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6125&dw=1&time=1340"
+        },
+        {
+          "hour": "13",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5679&dw=1&time=1350"
+        },
+        {
+          "hour": "14",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6067&dw=1&time=1400"
+        },
+        {
+          "hour": "14",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5680&dw=1&time=1410"
+        },
+        {
+          "hour": "14",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6126&dw=1&time=1420"
+        },
+        {
+          "hour": "14",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5681&dw=1&time=1430"
+        },
+        {
+          "hour": "14",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6127&dw=1&time=1440"
+        },
+        {
+          "hour": "14",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5682&dw=1&time=1450"
+        },
+        {
+          "hour": "15",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6128&dw=1&time=1500"
+        },
+        {
+          "hour": "15",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5683&dw=1&time=1510"
+        },
+        {
+          "hour": "15",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6129&dw=1&time=1520"
+        },
+        {
+          "hour": "15",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5684&dw=1&time=1530"
+        },
+        {
+          "hour": "15",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6130&dw=1&time=1540"
+        },
+        {
+          "hour": "15",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5685&dw=1&time=1550"
+        },
+        {
+          "hour": "16",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6131&dw=1&time=1600"
+        },
+        {
+          "hour": "16",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5686&dw=1&time=1610"
+        },
+        {
+          "hour": "16",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6068&dw=1&time=1620"
+        },
+        {
+          "hour": "16",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5687&dw=1&time=1630"
+        },
+        {
+          "hour": "16",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6132&dw=1&time=1640"
+        },
+        {
+          "hour": "16",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5688&dw=1&time=1650"
+        },
+        {
+          "hour": "17",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6133&dw=1&time=1700"
+        },
+        {
+          "hour": "17",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5689&dw=1&time=1710"
+        },
+        {
+          "hour": "17",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6134&dw=1&time=1720"
+        },
+        {
+          "hour": "17",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5690&dw=1&time=1730"
+        },
+        {
+          "hour": "17",
+          "minute": "40",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6069&dw=1&time=1740"
+        },
+        {
+          "hour": "17",
+          "minute": "53",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5691&dw=1&time=1750"
+        },
+        {
+          "hour": "18",
+          "minute": "00",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6071&dw=1&time=1800"
+        },
+        {
+          "hour": "18",
+          "minute": "13",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5692&dw=1&time=1810"
+        },
+        {
+          "hour": "18",
+          "minute": "21",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6028&dw=1&time=1820"
+        },
+        {
+          "hour": "18",
+          "minute": "33",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6030&dw=1&time=1830"
+        },
+        {
+          "hour": "18",
+          "minute": "47",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6035&dw=1&time=1840"
+        },
+        {
+          "hour": "18",
+          "minute": "57",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6029&dw=1&time=1850"
+        },
+        {
+          "hour": "19",
+          "minute": "12",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5665&dw=1&time=1910"
+        },
+        {
+          "hour": "19",
+          "minute": "24",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6031&dw=1&time=1920"
+        },
+        {
+          "hour": "19",
+          "minute": "36",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5695&dw=1&time=1930"
+        },
+        {
+          "hour": "19",
+          "minute": "49",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5700&dw=1&time=1940"
+        },
+        {
+          "hour": "20",
+          "minute": "05",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5693&dw=1&time=2000"
+        },
+        {
+          "hour": "20",
+          "minute": "17",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5696&dw=1&time=2010"
+        },
+        {
+          "hour": "20",
+          "minute": "25",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6033&dw=1&time=2020"
+        },
+        {
+          "hour": "20",
+          "minute": "36",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6034&dw=1&time=2030"
+        },
+        {
+          "hour": "20",
+          "minute": "48",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6037&dw=1&time=2040"
+        },
+        {
+          "hour": "20",
+          "minute": "59",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5699&dw=1&time=2050"
+        },
+        {
+          "hour": "21",
+          "minute": "12",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5694&dw=1&time=2110"
+        },
+        {
+          "hour": "21",
+          "minute": "28",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5843&dw=1&time=2120"
+        },
+        {
+          "hour": "21",
+          "minute": "42",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6070&dw=1&time=2140"
+        },
+        {
+          "hour": "21",
+          "minute": "57",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5697&dw=1&time=2150"
+        },
+        {
+          "hour": "22",
+          "minute": "09",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5847&dw=1&time=2200"
+        },
+        {
+          "hour": "22",
+          "minute": "20",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5845&dw=1&time=2220"
+        },
+        {
+          "hour": "22",
+          "minute": "34",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5662&dw=1&time=2230"
+        },
+        {
+          "hour": "22",
+          "minute": "47",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5782&dw=1&time=2240"
+        },
+        {
+          "hour": "22",
+          "minute": "58",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6032&dw=1&time=2250"
+        },
+        {
+          "hour": "23",
+          "minute": "12",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6036&dw=1&time=2310"
+        },
+        {
+          "hour": "23",
+          "minute": "27",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5698&dw=1&time=2320"
+        },
+        {
+          "hour": "23",
+          "minute": "38",
+          "destination": "尼崎",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5783&dw=1&time=2330"
+        },
+        {
+          "hour": "23",
+          "minute": "49",
+          "destination": "大阪難波",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6138&dw=1&time=2340"
+        }
+      ]
+    },
+    "奈良線 近鉄奈良方面": {
+      "weekday": [
+        {
+          "hour": "5",
+          "minute": "29",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5476&dw=0&time=0520"
+        },
+        {
+          "hour": "5",
+          "minute": "49",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5510&dw=0&time=0540"
+        },
+        {
+          "hour": "6",
+          "minute": "03",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5489&dw=0&time=0600"
+        },
+        {
+          "hour": "6",
+          "minute": "17",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-348&dw=0&time=0610"
+        },
+        {
+          "hour": "6",
+          "minute": "34",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5577&dw=0&time=0630"
+        },
+        {
+          "hour": "6",
+          "minute": "50",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5563&dw=0&time=0650"
+        },
+        {
+          "hour": "7",
+          "minute": "03",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5477&dw=0&time=0700"
+        },
+        {
+          "hour": "7",
+          "minute": "11",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-452&dw=0&time=0710"
+        },
+        {
+          "hour": "7",
+          "minute": "25",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-445&dw=0&time=0720"
+        },
+        {
+          "hour": "7",
+          "minute": "39",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-318&dw=0&time=0730"
+        },
+        {
+          "hour": "7",
+          "minute": "49",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5484&dw=0&time=0740"
+        },
+        {
+          "hour": "7",
+          "minute": "52",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-350&dw=0&time=0750"
+        },
+        {
+          "hour": "7",
+          "minute": "58",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-326&dw=0&time=0750"
+        },
+        {
+          "hour": "8",
+          "minute": "06",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5507&dw=0&time=0800"
+        },
+        {
+          "hour": "8",
+          "minute": "13",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5480&dw=0&time=0810"
+        },
+        {
+          "hour": "8",
+          "minute": "19",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-354&dw=0&time=0810"
+        },
+        {
+          "hour": "8",
+          "minute": "25",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-352&dw=0&time=0820"
+        },
+        {
+          "hour": "8",
+          "minute": "36",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5559&dw=0&time=0830"
+        },
+        {
+          "hour": "8",
+          "minute": "49",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5557&dw=0&time=0840"
+        },
+        {
+          "hour": "8",
+          "minute": "59",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5491&dw=0&time=0850"
+        },
+        {
+          "hour": "9",
+          "minute": "13",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5516&dw=0&time=0910"
+        },
+        {
+          "hour": "9",
+          "minute": "20",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-349&dw=0&time=0920"
+        },
+        {
+          "hour": "9",
+          "minute": "26",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5496&dw=0&time=0920"
+        },
+        {
+          "hour": "9",
+          "minute": "38",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5561&dw=0&time=0930"
+        },
+        {
+          "hour": "9",
+          "minute": "49",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5487&dw=0&time=0940"
+        },
+        {
+          "hour": "10",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5523&dw=0&time=1000"
+        },
+        {
+          "hour": "10",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-319&dw=0&time=1010"
+        },
+        {
+          "hour": "10",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5515&dw=0&time=1020"
+        },
+        {
+          "hour": "10",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5481&dw=0&time=1030"
+        },
+        {
+          "hour": "10",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-351&dw=0&time=1040"
+        },
+        {
+          "hour": "10",
+          "minute": "55",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-446&dw=0&time=1050"
+        },
+        {
+          "hour": "11",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5503&dw=0&time=1100"
+        },
+        {
+          "hour": "11",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-323&dw=0&time=1110"
+        },
+        {
+          "hour": "11",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5497&dw=0&time=1120"
+        },
+        {
+          "hour": "11",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-324&dw=0&time=1130"
+        },
+        {
+          "hour": "11",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5498&dw=0&time=1140"
+        },
+        {
+          "hour": "11",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-325&dw=0&time=1150"
+        },
+        {
+          "hour": "12",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5508&dw=0&time=1200"
+        },
+        {
+          "hour": "12",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-313&dw=0&time=1210"
+        },
+        {
+          "hour": "12",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5500&dw=0&time=1220"
+        },
+        {
+          "hour": "12",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-312&dw=0&time=1230"
+        },
+        {
+          "hour": "12",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5494&dw=0&time=1240"
+        },
+        {
+          "hour": "12",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-311&dw=0&time=1250"
+        },
+        {
+          "hour": "13",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5493&dw=0&time=1300"
+        },
+        {
+          "hour": "13",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-320&dw=0&time=1310"
+        },
+        {
+          "hour": "13",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5519&dw=0&time=1320"
+        },
+        {
+          "hour": "13",
+          "minute": "35",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-447&dw=0&time=1330"
+        },
+        {
+          "hour": "13",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5501&dw=0&time=1340"
+        },
+        {
+          "hour": "13",
+          "minute": "55",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-448&dw=0&time=1350"
+        },
+        {
+          "hour": "14",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5499&dw=0&time=1400"
+        },
+        {
+          "hour": "14",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-315&dw=0&time=1410"
+        },
+        {
+          "hour": "14",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5502&dw=0&time=1420"
+        },
+        {
+          "hour": "14",
+          "minute": "35",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-450&dw=0&time=1430"
+        },
+        {
+          "hour": "14",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5505&dw=0&time=1440"
+        },
+        {
+          "hour": "14",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-309&dw=0&time=1450"
+        },
+        {
+          "hour": "15",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5509&dw=0&time=1500"
+        },
+        {
+          "hour": "15",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-317&dw=0&time=1510"
+        },
+        {
+          "hour": "15",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5504&dw=0&time=1520"
+        },
+        {
+          "hour": "15",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-316&dw=0&time=1530"
+        },
+        {
+          "hour": "15",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5511&dw=0&time=1540"
+        },
+        {
+          "hour": "15",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-321&dw=0&time=1550"
+        },
+        {
+          "hour": "16",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5495&dw=0&time=1600"
+        },
+        {
+          "hour": "16",
+          "minute": "15",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-449&dw=0&time=1610"
+        },
+        {
+          "hour": "16",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5506&dw=0&time=1620"
+        },
+        {
+          "hour": "16",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-314&dw=0&time=1630"
+        },
+        {
+          "hour": "16",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5512&dw=0&time=1640"
+        },
+        {
+          "hour": "16",
+          "minute": "57",
+          "destination": "石切",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-532&dw=0&time=1650"
+        },
+        {
+          "hour": "17",
+          "minute": "06",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5568&dw=0&time=1700"
+        },
+        {
+          "hour": "17",
+          "minute": "10",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5492&dw=0&time=1710"
+        },
+        {
+          "hour": "17",
+          "minute": "22",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5486&dw=0&time=1720"
+        },
+        {
+          "hour": "17",
+          "minute": "32",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5574&dw=0&time=1730"
+        },
+        {
+          "hour": "17",
+          "minute": "42",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5558&dw=0&time=1740"
+        },
+        {
+          "hour": "17",
+          "minute": "52",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5571&dw=0&time=1750"
+        },
+        {
+          "hour": "18",
+          "minute": "02",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5565&dw=0&time=1800"
+        },
+        {
+          "hour": "18",
+          "minute": "11",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5569&dw=0&time=1810"
+        },
+        {
+          "hour": "18",
+          "minute": "22",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5566&dw=0&time=1820"
+        },
+        {
+          "hour": "18",
+          "minute": "32",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5570&dw=0&time=1830"
+        },
+        {
+          "hour": "18",
+          "minute": "42",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5478&dw=0&time=1840"
+        },
+        {
+          "hour": "18",
+          "minute": "52",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5572&dw=0&time=1850"
+        },
+        {
+          "hour": "19",
+          "minute": "03",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5482&dw=0&time=1900"
+        },
+        {
+          "hour": "19",
+          "minute": "11",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5573&dw=0&time=1910"
+        },
+        {
+          "hour": "19",
+          "minute": "22",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5564&dw=0&time=1920"
+        },
+        {
+          "hour": "19",
+          "minute": "32",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5575&dw=0&time=1930"
+        },
+        {
+          "hour": "19",
+          "minute": "42",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5562&dw=0&time=1940"
+        },
+        {
+          "hour": "19",
+          "minute": "52",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5576&dw=0&time=1950"
+        },
+        {
+          "hour": "20",
+          "minute": "02",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5479&dw=0&time=2000"
+        },
+        {
+          "hour": "20",
+          "minute": "10",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5485&dw=0&time=2010"
+        },
+        {
+          "hour": "20",
+          "minute": "22",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5560&dw=0&time=2020"
+        },
+        {
+          "hour": "20",
+          "minute": "31",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5522&dw=0&time=2030"
+        },
+        {
+          "hour": "20",
+          "minute": "45",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5483&dw=0&time=2040"
+        },
+        {
+          "hour": "21",
+          "minute": "00",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5517&dw=0&time=2100"
+        },
+        {
+          "hour": "21",
+          "minute": "14",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-310&dw=0&time=2110"
+        },
+        {
+          "hour": "21",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5518&dw=0&time=2120"
+        },
+        {
+          "hour": "21",
+          "minute": "35",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-355&dw=0&time=2130"
+        },
+        {
+          "hour": "21",
+          "minute": "51",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-451&dw=0&time=2150"
+        },
+        {
+          "hour": "22",
+          "minute": "04",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5521&dw=0&time=2200"
+        },
+        {
+          "hour": "22",
+          "minute": "15",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5520&dw=0&time=2210"
+        },
+        {
+          "hour": "22",
+          "minute": "29",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5567&dw=0&time=2220"
+        },
+        {
+          "hour": "22",
+          "minute": "42",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-327&dw=0&time=2240"
+        },
+        {
+          "hour": "23",
+          "minute": "00",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-353&dw=0&time=2300"
+        },
+        {
+          "hour": "23",
+          "minute": "16",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5514&dw=0&time=2310"
+        },
+        {
+          "hour": "23",
+          "minute": "30",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5513&dw=0&time=2330"
+        },
+        {
+          "hour": "23",
+          "minute": "44",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-322&dw=0&time=2340"
+        },
+        {
+          "hour": "0",
+          "minute": "05",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5488&dw=0&time=0000"
+        },
+        {
+          "hour": "0",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5490&dw=0&time=0020"
+        }
+      ],
+      "holiday": [
+        {
+          "hour": "5",
+          "minute": "29",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10753&dw=1&time=0520"
+        },
+        {
+          "hour": "5",
+          "minute": "49",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10847&dw=1&time=0540"
+        },
+        {
+          "hour": "6",
+          "minute": "04",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10760&dw=1&time=0600"
+        },
+        {
+          "hour": "6",
+          "minute": "24",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5984&dw=1&time=0620"
+        },
+        {
+          "hour": "6",
+          "minute": "38",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5981&dw=1&time=0630"
+        },
+        {
+          "hour": "6",
+          "minute": "53",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10761&dw=1&time=0650"
+        },
+        {
+          "hour": "7",
+          "minute": "07",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5982&dw=1&time=0700"
+        },
+        {
+          "hour": "7",
+          "minute": "24",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5945&dw=1&time=0720"
+        },
+        {
+          "hour": "7",
+          "minute": "32",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10762&dw=1&time=0730"
+        },
+        {
+          "hour": "7",
+          "minute": "44",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10846&dw=1&time=0740"
+        },
+        {
+          "hour": "7",
+          "minute": "57",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10766&dw=1&time=0750"
+        },
+        {
+          "hour": "8",
+          "minute": "12",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10758&dw=1&time=0810"
+        },
+        {
+          "hour": "8",
+          "minute": "24",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10763&dw=1&time=0820"
+        },
+        {
+          "hour": "8",
+          "minute": "29",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5979&dw=1&time=0820"
+        },
+        {
+          "hour": "8",
+          "minute": "39",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5980&dw=1&time=0830"
+        },
+        {
+          "hour": "8",
+          "minute": "47",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5944&dw=1&time=0840"
+        },
+        {
+          "hour": "8",
+          "minute": "58",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10759&dw=1&time=0850"
+        },
+        {
+          "hour": "9",
+          "minute": "09",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10764&dw=1&time=0900"
+        },
+        {
+          "hour": "9",
+          "minute": "20",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10765&dw=1&time=0920"
+        },
+        {
+          "hour": "9",
+          "minute": "31",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10754&dw=1&time=0930"
+        },
+        {
+          "hour": "9",
+          "minute": "40",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10770&dw=1&time=0940"
+        },
+        {
+          "hour": "9",
+          "minute": "54",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6084&dw=1&time=0950"
+        },
+        {
+          "hour": "10",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10768&dw=1&time=1000"
+        },
+        {
+          "hour": "10",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5962&dw=1&time=1010"
+        },
+        {
+          "hour": "10",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10767&dw=1&time=1020"
+        },
+        {
+          "hour": "10",
+          "minute": "35",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6091&dw=1&time=1030"
+        },
+        {
+          "hour": "10",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10769&dw=1&time=1040"
+        },
+        {
+          "hour": "10",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5948&dw=1&time=1050"
+        },
+        {
+          "hour": "11",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10771&dw=1&time=1100"
+        },
+        {
+          "hour": "11",
+          "minute": "15",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6092&dw=1&time=1110"
+        },
+        {
+          "hour": "11",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10772&dw=1&time=1120"
+        },
+        {
+          "hour": "11",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5960&dw=1&time=1130"
+        },
+        {
+          "hour": "11",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10773&dw=1&time=1140"
+        },
+        {
+          "hour": "11",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5951&dw=1&time=1150"
+        },
+        {
+          "hour": "12",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10774&dw=1&time=1200"
+        },
+        {
+          "hour": "12",
+          "minute": "15",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6085&dw=1&time=1210"
+        },
+        {
+          "hour": "12",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10775&dw=1&time=1220"
+        },
+        {
+          "hour": "12",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5953&dw=1&time=1230"
+        },
+        {
+          "hour": "12",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10776&dw=1&time=1240"
+        },
+        {
+          "hour": "12",
+          "minute": "55",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6090&dw=1&time=1250"
+        },
+        {
+          "hour": "13",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10777&dw=1&time=1300"
+        },
+        {
+          "hour": "13",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5956&dw=1&time=1310"
+        },
+        {
+          "hour": "13",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10778&dw=1&time=1320"
+        },
+        {
+          "hour": "13",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5949&dw=1&time=1330"
+        },
+        {
+          "hour": "13",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10779&dw=1&time=1340"
+        },
+        {
+          "hour": "13",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5952&dw=1&time=1350"
+        },
+        {
+          "hour": "14",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10780&dw=1&time=1400"
+        },
+        {
+          "hour": "14",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5955&dw=1&time=1410"
+        },
+        {
+          "hour": "14",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10781&dw=1&time=1420"
+        },
+        {
+          "hour": "14",
+          "minute": "35",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5957&dw=1&time=1430"
+        },
+        {
+          "hour": "14",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10782&dw=1&time=1440"
+        },
+        {
+          "hour": "14",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5959&dw=1&time=1450"
+        },
+        {
+          "hour": "15",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10783&dw=1&time=1500"
+        },
+        {
+          "hour": "15",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5954&dw=1&time=1510"
+        },
+        {
+          "hour": "15",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10784&dw=1&time=1520"
+        },
+        {
+          "hour": "15",
+          "minute": "35",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6087&dw=1&time=1530"
+        },
+        {
+          "hour": "15",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10785&dw=1&time=1540"
+        },
+        {
+          "hour": "15",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5958&dw=1&time=1550"
+        },
+        {
+          "hour": "16",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10786&dw=1&time=1600"
+        },
+        {
+          "hour": "16",
+          "minute": "15",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6083&dw=1&time=1610"
+        },
+        {
+          "hour": "16",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10787&dw=1&time=1620"
+        },
+        {
+          "hour": "16",
+          "minute": "35",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6094&dw=1&time=1630"
+        },
+        {
+          "hour": "16",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10788&dw=1&time=1640"
+        },
+        {
+          "hour": "16",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5946&dw=1&time=1650"
+        },
+        {
+          "hour": "17",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10789&dw=1&time=1700"
+        },
+        {
+          "hour": "17",
+          "minute": "15",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6093&dw=1&time=1710"
+        },
+        {
+          "hour": "17",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10790&dw=1&time=1720"
+        },
+        {
+          "hour": "17",
+          "minute": "35",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6089&dw=1&time=1730"
+        },
+        {
+          "hour": "17",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10791&dw=1&time=1740"
+        },
+        {
+          "hour": "17",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5947&dw=1&time=1750"
+        },
+        {
+          "hour": "18",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10794&dw=1&time=1800"
+        },
+        {
+          "hour": "18",
+          "minute": "15",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5950&dw=1&time=1810"
+        },
+        {
+          "hour": "18",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10795&dw=1&time=1820"
+        },
+        {
+          "hour": "18",
+          "minute": "35",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6088&dw=1&time=1830"
+        },
+        {
+          "hour": "18",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10796&dw=1&time=1840"
+        },
+        {
+          "hour": "18",
+          "minute": "55",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5961&dw=1&time=1850"
+        },
+        {
+          "hour": "19",
+          "minute": "01",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10797&dw=1&time=1900"
+        },
+        {
+          "hour": "19",
+          "minute": "15",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6082&dw=1&time=1910"
+        },
+        {
+          "hour": "19",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10798&dw=1&time=1920"
+        },
+        {
+          "hour": "19",
+          "minute": "35",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5986&dw=1&time=1930"
+        },
+        {
+          "hour": "19",
+          "minute": "41",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10849&dw=1&time=1940"
+        },
+        {
+          "hour": "19",
+          "minute": "51",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10799&dw=1&time=1950"
+        },
+        {
+          "hour": "20",
+          "minute": "03",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10848&dw=1&time=2000"
+        },
+        {
+          "hour": "20",
+          "minute": "19",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10793&dw=1&time=2010"
+        },
+        {
+          "hour": "20",
+          "minute": "35",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5987&dw=1&time=2030"
+        },
+        {
+          "hour": "20",
+          "minute": "41",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10757&dw=1&time=2040"
+        },
+        {
+          "hour": "20",
+          "minute": "49",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5985&dw=1&time=2040"
+        },
+        {
+          "hour": "21",
+          "minute": "03",
+          "destination": "東生駒",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10852&dw=1&time=2100"
+        },
+        {
+          "hour": "21",
+          "minute": "17",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10755&dw=1&time=2110"
+        },
+        {
+          "hour": "21",
+          "minute": "29",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10801&dw=1&time=2120"
+        },
+        {
+          "hour": "21",
+          "minute": "46",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5983&dw=1&time=2140"
+        },
+        {
+          "hour": "21",
+          "minute": "58",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10851&dw=1&time=2150"
+        },
+        {
+          "hour": "22",
+          "minute": "14",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10800&dw=1&time=2210"
+        },
+        {
+          "hour": "22",
+          "minute": "28",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10792&dw=1&time=2220"
+        },
+        {
+          "hour": "22",
+          "minute": "41",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10802&dw=1&time=2240"
+        },
+        {
+          "hour": "22",
+          "minute": "55",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5988&dw=1&time=2250"
+        },
+        {
+          "hour": "23",
+          "minute": "11",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-6086&dw=1&time=2310"
+        },
+        {
+          "hour": "23",
+          "minute": "28",
+          "destination": "奈良",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10850&dw=1&time=2320"
+        },
+        {
+          "hour": "23",
+          "minute": "44",
+          "destination": "大和西大寺",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10756&dw=1&time=2340"
+        },
+        {
+          "hour": "0",
+          "minute": "05",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-5989&dw=1&time=0000"
+        },
+        {
+          "hour": "0",
+          "minute": "21",
+          "destination": "東花園",
+          "trainType": "普通",
+          "detailUrl": "https://eki.kintetsu.co.jp/norikae/T7?sf=6094&tx=1-10803&dw=1&time=0020"
+        }
+      ]
+    }
+  }
+}

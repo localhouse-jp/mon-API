@@ -1,0 +1,46 @@
+
+<HTML>
+<HEAD><TITLE>八戸ノ里駅の時刻表</TITLE></HEAD>
+<BODY>
+★検索結果<br>
+
+
+
+
+
+<font color="black"></font><br>
+
+
+
+
+<font color="red"><b></b></font><br>
+奈良線<br>
+八戸ノ里駅発車時刻表<br>
+近鉄奈良方面<br>
+平日のダイヤ<br>
+<A HREF="T7?uid=31092&dir=34&path=2025050321934189&sf=6094&tx=1-5488&dw=0&USR=IM&time=0000&reFlg=0">&nbsp;0:05&nbsp;東花園&nbsp;普通</A><br>
+<A HREF="T7?uid=31092&dir=34&path=2025050321934189&sf=6094&tx=1-5490&dw=0&USR=IM&time=0020&reFlg=0">&nbsp;0:21&nbsp;東花園&nbsp;普通</A><br>
+2025/2/22現在<br>
+<hr>
+<A HREF="T5?uid=31092&dir=34&path=2025050321934189&slCode=350-8&time=2135&d=2&dw=0&date=20250507&pFlg=2&USR=IM&reFlg=0&ps=0&es=null">↑前時間</A><br>
+<A HREF="T3?uid=31092&dir=34&path=2025050321934189&sf=%94%AA%8C%CB%83%6D%97%A2&sfCode=6094&slCode=350-8&d=2&time=0000&dw=0&USR=IM&ps=0&es=null" ACCESSKEY=1>1.方面/時刻選択へ</A><br>
+
+<FORM ACTION="http://www.ticket.kintetsu.co.jp/M/MET/MET60.do" METHOD="POST">
+<INPUT TYPE="HIDDEN" NAME="op" VALUE="mExecuteExpVacGid">
+<INPUT TYPE="HIDDEN" NAME="ps100" VALUE="EKITAN">
+<INPUT TYPE="HIDDEN" NAME="pi104" VALUE="八戸ノ里">
+<INPUT TYPE="HIDDEN" NAME="pi106" VALUE="">
+<INPUT TYPE="HIDDEN" NAME="pi100" VALUE="">
+<INPUT TYPE="HIDDEN" NAME="pi101" VALUE="">
+<INPUT TYPE="HIDDEN" NAME="pi102" VALUE="00">
+<INPUT TYPE="HIDDEN" NAME="pi103" VALUE="00">
+<INPUT TYPE="HIDDEN" NAME="ps001" VALUE="g">
+
+</FORM>
+<hr>
+
+<A HREF="/norikae/T1?USR=IM&sf=%94%AA%8C%CB%83%6D%97%A2" ACCESSKEY="8">8.時刻表トップ</A><BR>
+<A HREF="http://www.kintetsu.co.jp/i/" ACCESSKEY="9">9.トップ</A><BR>
+
+</BODY>
+</HTML>
