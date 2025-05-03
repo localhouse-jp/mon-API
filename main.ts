@@ -40,13 +40,8 @@ async function fetchDirection(
   sp.set('pFlg', '0');
 
   console.debug(`→ fetchDirection: slCode=${slCode}, d=${d}, dw=${dw}`);
-
   const res = await fetch(url.toString(), {
-    headers: {
-      'User-Agent': 'Mozilla/5.0',
-      'Accept': 'text/html,application/xhtml+xml',
-      'Accept-Language': 'ja'
-    }
+    headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ja' }
   });
   console.debug(`  status: ${res.status}`);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -70,8 +65,8 @@ async function fetchDirection(
       const minute = $a.find('span').text().trim();
       const href = $a.attr('href') || '';
       const detailUrl = new URL(href, url.toString()).toString();
-      const [destination = '', trainType = ''] = $a
-        .clone().children('br').remove().end()
+      const [destination = '', trainType = ''] = $a.clone()
+        .children('br').remove().end()
         .text().replace(/\s+/g, ' ').trim().split(' ');
       entries.push({ hour, minute, destination, trainType, detailUrl });
     });
@@ -81,14 +76,20 @@ async function fetchDirection(
 }
 
 /**
- * 駅ページから駅名と時刻表をまとめて取得（デバッグログ付）
+ * 駅ページから駅名と時刻表をまとめて取得（dmode=detail設定＆デバッグログ付）
  */
 async function fetchStationTimetable(
   initialUrl: string
 ): Promise<{ stationName: string; timetables: StationResult }> {
-  console.debug(`fetchStationTimetable: ${initialUrl}`);
-  const initRes = await fetch(initialUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  // 詳細モードで取得
+  const url = new URL(initialUrl);
+  url.searchParams.set('dmode', 'detail');
+  url.searchParams.set('pFlg', '0');
+  console.debug(`fetchStationTimetable: ${url.toString()}`);
+
+  const initRes = await fetch(url.toString(), { headers: { 'User-Agent': 'Mozilla/5.0' } });
   console.debug(`  initial status: ${initRes.status}`);
+  if (!initRes.ok) throw new Error(`HTTP ${initRes.status}`);
   const buf = Buffer.from(await initRes.arrayBuffer());
   const html = iconv.decode(buf, 'shift_jis');
   const $init = cheerio.load(html);
@@ -105,7 +106,7 @@ async function fetchStationTimetable(
     const name = $opt.text().trim();
     console.debug(`  option: slCode=${slCode}, d=${d}, name=${name}`);
     return { slCode, d, name };
-  }).get();
+  }).get<{ slCode: string; d: string; name: string }>();
 
   const timetables: StationResult = {};
   for (const { slCode, d, name } of options) {
@@ -126,12 +127,12 @@ async function fetchStationTimetable(
     'https://eki.kintetsu.co.jp/norikae/T5?USR=PC&slCode=350-8&d=1&dw=0'
   ];
   const result: Record<string, StationResult> = {};
-  for (const url of urls) {
+  for (const urlStr of urls) {
     try {
-      const { stationName, timetables } = await fetchStationTimetable(url);
+      const { stationName, timetables } = await fetchStationTimetable(urlStr);
       result[stationName] = timetables;
     } catch (err) {
-      console.error(`Error fetching ${url}:`, err);
+      console.error(`Error fetching ${urlStr}:`, err);
     }
   }
   console.log(JSON.stringify(result, null, 2));
