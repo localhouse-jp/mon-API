@@ -26,14 +26,11 @@ research-kindai/
 │   ├── parsers/          # パーサーのコード
 │   │   ├── jr.ts         # JRのパーサー実装
 │   │   └── kintetsu.ts   # 近鉄パーサー実装
-│   ├── config/           # 設定ファイル
-│   ├── types/            # 型定義
 │   ├── utils/            # ユーティリティ関数
 │   │   ├── cache.ts      # キャッシュユーティリティ
 │   │   └── config.ts     # 設定読み込みユーティリティ
 │   └── index.ts          # アプリケーションのエントリーポイント
 ├── dist/                 # 出力データディレクトリ
-├── public/               # 静的ファイル
 ├── config.json           # メイン設定ファイル
 ├── package.json          # パッケージ設定
 └── README.md             # このファイル
@@ -79,18 +76,13 @@ bun run src/index.ts
 - `GET /api/all` - すべての鉄道会社のデータを統合して取得
 - `POST /api/cache/clear` - キャッシュをクリア（オプションで特定のキーのみをクリア可能）
 
-### 個別のパーサーの実行
+### データの直接更新
 
-#### 近鉄データの取得
-
-```bash
-bun run main.ts
-```
-
-#### JRデータの取得
+すべてのデータは通常自動的にキャッシュされ、1時間ごとに更新されますが、必要に応じて以下のコマンドを実行して直接APIサーバーを通じてデータを更新できます：
 
 ```bash
-bun run jr.ts
+# キャッシュをクリアして強制更新
+curl -X POST http://localhost:3000/api/cache/clear -H "Content-Type: application/json" -d '{"key":"all"}'
 ```
 
 ## 設定
@@ -117,7 +109,7 @@ bun run jr.ts
 ### 新しいパーサーの追加
 
 1. `src/parsers/` ディレクトリに新しいパーサーファイルを作成
-2. `TimetableParser` インターフェースに準拠した実装を行う
+2. `TimetableEntry` インターフェースに準拠した実装を行う
 3. `src/api/routes.ts` ファイルに新しいパーサーのエンドポイントを追加
 
 ## ライセンス
