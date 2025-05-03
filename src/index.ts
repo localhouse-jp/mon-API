@@ -1,8 +1,8 @@
+import { swaggerUI } from '@hono/swagger-ui';
 import { serve } from 'bun';
+import * as fs from 'fs';
 import { Hono } from 'hono';
 import { serveStatic } from 'hono/bun';
-import { swaggerUI } from '@hono/swagger-ui';
-import * as fs from 'fs';
 import * as yaml from 'yaml';
 import apiRoutes, { initRoutes } from './api/routes';
 

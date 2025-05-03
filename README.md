@@ -1,11 +1,11 @@
-# 鉄道時刻表 API
+# 鉄道・バス時刻表 API
 
-複数の鉄道会社の時刻表データを収集し、JSON形式で提供するAPIサーバーです。
-現在は近鉄とJRの時刻表に対応しています。
+複数の鉄道会社とバス会社の時刻表データを収集し、JSON形式で提供するAPIサーバーです。
+現在は近鉄・JRの鉄道時刻表と近鉄バスの時刻表に対応しています。
 
 ## 機能
 
-- 複数の鉄道会社の時刻表情報をスクレイピング
+- 複数の鉄道会社・バス会社の時刻表情報をスクレイピングまたは定義データから提供
 - 時刻表データをJSON形式でAPI提供
 - インメモリキャッシュによるパフォーマンス最適化（1時間ごとに更新）
 - ファイルベースのデータ永続化
@@ -25,7 +25,8 @@ research-kindai/
 │   │   └── routes.ts     # APIエンドポイントの実装
 │   ├── parsers/          # パーサーのコード
 │   │   ├── jr.ts         # JRのパーサー実装
-│   │   └── kintetsu.ts   # 近鉄パーサー実装
+│   │   ├── kintetsu.ts   # 近鉄パーサー実装
+│   │   └── kintetsu-bus.ts # 近鉄バスパーサー実装
 │   ├── scripts/          # 実行スクリプト
 │   │   └── generate-json.ts  # JSONファイル生成スクリプト
 │   ├── types/            # 型定義ファイル
@@ -37,6 +38,7 @@ research-kindai/
 ├── dist/                 # 出力データディレクトリ
 ├── config.json           # メイン設定ファイル
 ├── package.json          # パッケージ設定
+├── openapi.yaml          # OpenAPIドキュメント
 └── README.md             # このファイル
 ```
 
@@ -85,16 +87,23 @@ bun run src/scripts/generate-json.ts jr        # JRのデータのみ
 - `dist/kintetsu-train.json` - 近鉄の時刻表データ
 - `dist/jr-train.json` - JRの時刻表データ
 
-### 環境変数
-
-- `PORT`: サーバーのポート番号（デフォルト: 3000）
-- `CACHE_VALIDITY_MS`: キャッシュの有効期間（ミリ秒、デフォルト: 3600000 = 1時間）
-
 ### 利用可能なエンドポイント
 
-- `GET /api/kintetsu` - 近鉄の時刻表データを取得
-- `GET /api/jr` - JRの時刻表データを取得
-- `GET /api/all` - すべての鉄道会社のデータを統合して取得
+#### 鉄道関連
+
+- `GET /api/kintetsu` - 近鉄の鉄道時刻表データを取得
+- `GET /api/jr` - JRの鉄道時刻表データを取得
+
+#### バス関連
+
+- `GET /api/kintetsu-bus` - 近鉄バスの全時刻表データを取得
+- `GET /api/kintetsu-bus/calendar/:date` - 指定日（YYYY-MM-DD形式）の運行情報を取得
+- `GET /api/kintetsu-bus/stop/:stopName` - 特定のバス停の時刻表を取得
+  - `date` クエリパラメータで日付指定可能（例: `/api/kintetsu-bus/stop/近畿大学東門前?date=2025-05-07`）
+
+#### 総合
+
+- `GET /api/all` - すべての鉄道・バス会社のデータを統合して取得
 - `POST /api/cache/clear` - キャッシュをクリア（オプションで特定のキーのみをクリア可能）
 
 ### データの直接更新
@@ -105,6 +114,16 @@ bun run src/scripts/generate-json.ts jr        # JRのデータのみ
 # キャッシュをクリアして強制更新
 curl -X POST http://localhost:3000/api/cache/clear -H "Content-Type: application/json" -d '{"key":"all"}'
 ```
+
+## 近鉄バスの運行カレンダー
+
+近鉄バスは運行日によって運行パターンが異なります：
+
+- **運行日（A）** - 通常の平日運行
+- **運行日（B）** - 土曜・休日など一部の日の運行
+- **運行なし** - 日曜や祝日など運行しない日
+
+運行日のカレンダーは各月ごとに定義されており、`/api/kintetsu-bus/calendar/:date` エンドポイントを使用して特定の日の運行情報を取得できます。
 
 ## 設定
 
