@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: 鉄道時刻表API
+  description: JRと近鉄の鉄道時刻表データを提供するAPI
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: 開発サーバー
+
+paths:
+  /api/kintetsu:
+    get:
+      summary: 近鉄の時刻表データを取得
+      description: 近鉄の時刻表データを取得します。データは1時間ごとに更新されます。
+      responses:
+        '200':
+          description: 成功レスポンス
+          content:
+            application/json:
+              schema:
+                type: object
+                description: 近鉄の時刻表データ
+        '500':
+          description: サーバーエラー
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: '近鉄のデータを取得できませんでした'
+
+  /api/jr:
+    get:
+      summary: JRの時刻表データを取得
+      description: JRの時刻表データを取得します。データは1時間ごとに更新されます。
+      responses:
+        '200':
+          description: 成功レスポンス
+          content:
+            application/json:
+              schema:
+                type: object
+                description: JRの時刻表データ
+        '500':
+          description: サーバーエラー
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: 'JRのデータを取得できませんでした'
+
+  /api/all:
+    get:
+      summary: すべての鉄道会社の時刻表データを取得
+      description: JRと近鉄の時刻表データをまとめて取得します。データは1時間ごとに更新されます。
+      responses:
+        '200':
+          description: 成功レスポンス
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  kintetsu:
+                    type: object
+                    description: 近鉄の時刻表データ
+                  jr:
+                    type: object
+                    description: JRの時刻表データ
+                  lastUpdated:
+                    type: string
+                    format: date-time
+                    description: データの最終更新日時
+                    example: '2025-05-04T10:30:00Z'
+
+  /api/cache/clear:
+    post:
+      summary: キャッシュをクリア
+      description: APIのキャッシュデータをクリアします。特定のキャッシュまたはすべてのキャッシュをクリアできます。
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                key:
+                  type: string
+                  description: クリアするキャッシュのキー。指定しない場合はすべてのキャッシュをクリアします。
+                  example: 'kintetsu'
+                  nullable: true
+      responses:
+        '200':
+          description: 成功レスポンス
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: 'キャッシュ "kintetsu" をクリアしました'

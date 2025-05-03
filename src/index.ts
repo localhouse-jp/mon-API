@@ -1,6 +1,9 @@
 import { serve } from 'bun';
 import { Hono } from 'hono';
 import { serveStatic } from 'hono/bun';
+import { swaggerUI } from '@hono/swagger-ui';
+import * as fs from 'fs';
+import * as yaml from 'yaml';
 import apiRoutes, { initRoutes } from './api/routes';
 
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
@@ -10,6 +13,12 @@ const app = new Hono();
 app.route('/', apiRoutes);
 
 app.use('/static/*', serveStatic({ root: './public' }));
+
+// OpenAPI ドキュメントを読み込み
+const openApiDoc = yaml.parse(fs.readFileSync('./openapi.yaml', 'utf8'));
+
+// Swagger UI の設定
+app.get('/api-docs/*', swaggerUI({ spec: openApiDoc }));
 
 app.get('/', async (c) => {
   return c.html(`
@@ -24,6 +33,8 @@ app.get('/', async (c) => {
         h1 { color: #333; }
         .endpoint { background: #f5f5f5; padding: 10px; border-radius: 5px; margin: 10px 0; }
         code { background: #eee; padding: 2px 4px; border-radius: 3px; }
+        .docs-link { margin-top: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; 
+                     text-decoration: none; display: inline-block; border-radius: 4px; }
       </style>
     </head>
     <body>
@@ -46,6 +57,8 @@ app.get('/', async (c) => {
       </div>
       
       <p>データは1時間ごとに更新されます。</p>
+
+      <a href="/api-docs" class="docs-link">API ドキュメントを表示</a>
     </body>
     </html>
   `);
