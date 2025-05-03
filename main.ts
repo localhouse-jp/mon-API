@@ -2,9 +2,10 @@
 // bun add cheerio iconv-lite fs
 
 import * as fs from 'fs';
-import { JRParser } from './parsers/jr';
+import * as path from 'path';
 import { KintetsuParser } from './parsers/kintetsu';
-import { ParserResult, TimetableParser } from './types';
+import { TimetableParser } from './types';
+// JRパーサーは別ファイル（./jr.ts）で実装されているため、importしない
 
 // 引数処理用の簡易インターフェース
 interface ParserConfig {
@@ -15,7 +16,7 @@ interface ParserConfig {
 // 設定ファイルのインターフェース（実行時引数がない場合に使用）
 interface ConfigFile {
   parsers: ParserConfig[];
-  outputPath?: string;
+  outputDir?: string;
 }
 
 /**
@@ -44,7 +45,7 @@ function loadConfig(): ConfigFile {
         ]
       }
     ],
-    outputPath: './timetable.json'
+    outputDir: './dist'
   };
 }
 
@@ -57,12 +58,21 @@ function getParserByName(name: string): TimetableParser | null {
   switch (name.toLowerCase()) {
     case 'kintetsu':
       return new KintetsuParser();
-    case 'jr':
-      return new JRParser();
-    // 他のパーサーを追加する場合はここに case を追加
+    // JRパーサーは別ファイル（./jr.ts）で実装
     default:
       console.error(`未知のパーサー: ${name}`);
       return null;
+  }
+}
+
+/**
+ * 出力ディレクトリを確保
+ * @param dir ディレクトリパス
+ */
+function ensureDirectoryExists(dir: string): void {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+    console.log(`ディレクトリを作成しました: ${dir}`);
   }
 }
 
@@ -72,27 +82,30 @@ function getParserByName(name: string): TimetableParser | null {
 async function main() {
   // 設定を読み込む
   const config = loadConfig();
-  const results: Record<string, ParserResult> = {};
+  const outputDir = config.outputDir || './dist';
 
-  // 各パーサーを実行
-  for (const parserConfig of config.parsers) {
-    const parser = getParserByName(parserConfig.name);
-    if (!parser) continue;
+  // 出力ディレクトリを作成
+  ensureDirectoryExists(outputDir);
 
-    console.log(`パーサー ${parserConfig.name} を実行中...`);
-    try {
-      const result = await parser.parseUrls(parserConfig.urls);
-      results[parserConfig.name] = result;
-      console.log(`パーサー ${parserConfig.name} の実行が完了しました`);
-    } catch (err) {
-      console.error(`パーサー ${parserConfig.name} の実行中にエラーが発生しました:`, err);
+  // 近鉄パーサーを実行
+  const kintetsuConfig = config.parsers.find(p => p.name.toLowerCase() === 'kintetsu');
+  if (kintetsuConfig) {
+    const parser = getParserByName('kintetsu');
+    if (parser) {
+      console.log(`パーサー kintetsu を実行中...`);
+      try {
+        const result = await parser.parseUrls(kintetsuConfig.urls);
+        const outputPath = path.join(outputDir, 'kintetsu-train.json');
+        fs.writeFileSync(outputPath, JSON.stringify(result, null, 2), 'utf-8');
+        console.log(`近鉄の結果を ${outputPath} に出力しました`);
+      } catch (err) {
+        console.error(`パーサー kintetsu の実行中にエラーが発生しました:`, err);
+      }
     }
   }
 
-  // 結果を出力
-  const outputPath = config.outputPath || './timetable.json';
-  fs.writeFileSync(outputPath, JSON.stringify(results, null, 2), 'utf-8');
-  console.log(`結果を ${outputPath} に出力しました`);
+  // JRパーサーは別ファイル（./jr.ts）で実行するため、ここでは何もしない
+  console.log('JRパーサーは別ファイル（./jr.ts）で実行してください');
 }
 
 // スクリプト実行

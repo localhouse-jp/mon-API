@@ -2,6 +2,8 @@
 // bun add cheerio
 
 import * as cheerio from 'cheerio';
+import * as fs from 'fs';
+import * as path from 'path';
 
 interface TimetableEntry {
   hour: string;  // 時
@@ -23,6 +25,17 @@ const destinationMap: Record<string, string> = {
   '奈': '奈良',
   // 必要に応じて他の略称も追加
 };
+
+/**
+ * 出力ディレクトリを確保
+ * @param dir ディレクトリパス
+ */
+function ensureDirectoryExists(dir: string): void {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+    console.log(`ディレクトリを作成しました: ${dir}`);
+  }
+}
 
 /**
  * JRおでかけネット 駅時刻表を取得して JSON 生成
@@ -73,6 +86,10 @@ async function fetchStationTimetable(url: string): Promise<{ stationName: string
   ];
 
   const allResults: Record<string, StationTimetables> = {};
+  const outputDir = './dist';
+
+  // 出力ディレクトリを確保
+  ensureDirectoryExists(outputDir);
 
   for (const url of urls) {
     try {
@@ -89,5 +106,8 @@ async function fetchStationTimetable(url: string): Promise<{ stationName: string
     }
   }
 
-  console.log(JSON.stringify(allResults, null, 2));
+  // 結果をファイルに書き込み
+  const outputPath = path.join(outputDir, 'jr-train.json');
+  fs.writeFileSync(outputPath, JSON.stringify(allResults, null, 2), 'utf-8');
+  console.log(`JRの結果を ${outputPath} に出力しました`);
 })();

@@ -8,5 +8,5 @@
       ]
     }
   ],
-  "outputPath": "./timetable.json"
+  "outputDir": "./dist"
 }

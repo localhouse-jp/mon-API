@@ -1,0 +1,932 @@
+{
+  "ＪＲ俊徳道駅": {
+    "放出・新大阪・大阪（地下ホーム）方面": [
+      {
+        "hour": "5",
+        "minute": "40",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270461?date=20250503"
+      },
+      {
+        "hour": "6",
+        "minute": "10",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270481?date=20250503"
+      },
+      {
+        "hour": "6",
+        "minute": "41",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271581?date=20250503"
+      },
+      {
+        "hour": "7",
+        "minute": "11",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270541?date=20250503"
+      },
+      {
+        "hour": "7",
+        "minute": "26",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270561?date=20250503"
+      },
+      {
+        "hour": "7",
+        "minute": "41",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270601?date=20250503"
+      },
+      {
+        "hour": "7",
+        "minute": "49",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270621?date=20250503"
+      },
+      {
+        "hour": "8",
+        "minute": "11",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270661?date=20250503"
+      },
+      {
+        "hour": "8",
+        "minute": "26",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270681?date=20250503"
+      },
+      {
+        "hour": "8",
+        "minute": "41",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270721?date=20250503"
+      },
+      {
+        "hour": "8",
+        "minute": "49",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270741?date=20250503"
+      },
+      {
+        "hour": "9",
+        "minute": "11",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270761?date=20250503"
+      },
+      {
+        "hour": "9",
+        "minute": "26",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270781?date=20250503"
+      },
+      {
+        "hour": "9",
+        "minute": "41",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270801?date=20250503"
+      },
+      {
+        "hour": "9",
+        "minute": "56",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270821?date=20250503"
+      },
+      {
+        "hour": "10",
+        "minute": "11",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270841?date=20250503"
+      },
+      {
+        "hour": "10",
+        "minute": "26",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270861?date=20250503"
+      },
+      {
+        "hour": "10",
+        "minute": "41",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270881?date=20250503"
+      },
+      {
+        "hour": "10",
+        "minute": "56",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270901?date=20250503"
+      },
+      {
+        "hour": "11",
+        "minute": "11",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270921?date=20250503"
+      },
+      {
+        "hour": "11",
+        "minute": "24",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270931?date=20250503"
+      },
+      {
+        "hour": "11",
+        "minute": "39",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270941?date=20250503"
+      },
+      {
+        "hour": "11",
+        "minute": "54",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270951?date=20250503"
+      },
+      {
+        "hour": "12",
+        "minute": "9",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270961?date=20250503"
+      },
+      {
+        "hour": "12",
+        "minute": "24",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270971?date=20250503"
+      },
+      {
+        "hour": "12",
+        "minute": "39",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270981?date=20250503"
+      },
+      {
+        "hour": "12",
+        "minute": "58",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271001?date=20250503"
+      },
+      {
+        "hour": "13",
+        "minute": "9",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271011?date=20250503"
+      },
+      {
+        "hour": "13",
+        "minute": "24",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271021?date=20250503"
+      },
+      {
+        "hour": "13",
+        "minute": "39",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271031?date=20250503"
+      },
+      {
+        "hour": "13",
+        "minute": "54",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271041?date=20250503"
+      },
+      {
+        "hour": "14",
+        "minute": "9",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271051?date=20250503"
+      },
+      {
+        "hour": "14",
+        "minute": "24",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271061?date=20250503"
+      },
+      {
+        "hour": "14",
+        "minute": "39",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271071?date=20250503"
+      },
+      {
+        "hour": "14",
+        "minute": "54",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271081?date=20250503"
+      },
+      {
+        "hour": "15",
+        "minute": "9",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271091?date=20250503"
+      },
+      {
+        "hour": "15",
+        "minute": "25",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271111?date=20250503"
+      },
+      {
+        "hour": "15",
+        "minute": "40",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271131?date=20250503"
+      },
+      {
+        "hour": "15",
+        "minute": "55",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271151?date=20250503"
+      },
+      {
+        "hour": "16",
+        "minute": "10",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271171?date=20250503"
+      },
+      {
+        "hour": "16",
+        "minute": "28",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271191?date=20250503"
+      },
+      {
+        "hour": "16",
+        "minute": "40",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271211?date=20250503"
+      },
+      {
+        "hour": "16",
+        "minute": "58",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271231?date=20250503"
+      },
+      {
+        "hour": "17",
+        "minute": "10",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271251?date=20250503"
+      },
+      {
+        "hour": "17",
+        "minute": "29",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271271?date=20250503"
+      },
+      {
+        "hour": "17",
+        "minute": "40",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271281?date=20250503"
+      },
+      {
+        "hour": "17",
+        "minute": "55",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271291?date=20250503"
+      },
+      {
+        "hour": "18",
+        "minute": "10",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271311?date=20250503"
+      },
+      {
+        "hour": "18",
+        "minute": "25",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271321?date=20250503"
+      },
+      {
+        "hour": "18",
+        "minute": "40",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271331?date=20250503"
+      },
+      {
+        "hour": "18",
+        "minute": "55",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271351?date=20250503"
+      },
+      {
+        "hour": "19",
+        "minute": "10",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271361?date=20250503"
+      },
+      {
+        "hour": "19",
+        "minute": "25",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271371?date=20250503"
+      },
+      {
+        "hour": "19",
+        "minute": "40",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271391?date=20250503"
+      },
+      {
+        "hour": "19",
+        "minute": "55",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271401?date=20250503"
+      },
+      {
+        "hour": "20",
+        "minute": "10",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271411?date=20250503"
+      },
+      {
+        "hour": "20",
+        "minute": "28",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271431?date=20250503"
+      },
+      {
+        "hour": "20",
+        "minute": "49",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271451?date=20250503"
+      },
+      {
+        "hour": "21",
+        "minute": "11",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271471?date=20250503"
+      },
+      {
+        "hour": "21",
+        "minute": "31",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271491?date=20250503"
+      },
+      {
+        "hour": "21",
+        "minute": "54",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271511?date=20250503"
+      },
+      {
+        "hour": "22",
+        "minute": "17",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271531?date=20250503"
+      },
+      {
+        "hour": "22",
+        "minute": "41",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271551?date=20250503"
+      },
+      {
+        "hour": "23",
+        "minute": "6",
+        "destination": "大阪",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/271571?date=20250503"
+      },
+      {
+        "hour": "23",
+        "minute": "27",
+        "destination": "放出",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/166221?date=20250503"
+      },
+      {
+        "hour": "23",
+        "minute": "55",
+        "destination": "放出",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/166231?date=20250503"
+      }
+    ],
+    "久宝寺・奈良方面": [
+      {
+        "hour": "6",
+        "minute": "19",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269371?date=20250503"
+      },
+      {
+        "hour": "6",
+        "minute": "45",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269391?date=20250503"
+      },
+      {
+        "hour": "7",
+        "minute": "17",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269411?date=20250503"
+      },
+      {
+        "hour": "7",
+        "minute": "37",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269431?date=20250503"
+      },
+      {
+        "hour": "7",
+        "minute": "52",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269451?date=20250503"
+      },
+      {
+        "hour": "8",
+        "minute": "7",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269471?date=20250503"
+      },
+      {
+        "hour": "8",
+        "minute": "22",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269491?date=20250503"
+      },
+      {
+        "hour": "8",
+        "minute": "37",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269511?date=20250503"
+      },
+      {
+        "hour": "8",
+        "minute": "52",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269531?date=20250503"
+      },
+      {
+        "hour": "9",
+        "minute": "7",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269551?date=20250503"
+      },
+      {
+        "hour": "9",
+        "minute": "21",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269571?date=20250503"
+      },
+      {
+        "hour": "9",
+        "minute": "36",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269591?date=20250503"
+      },
+      {
+        "hour": "9",
+        "minute": "50",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269611?date=20250503"
+      },
+      {
+        "hour": "10",
+        "minute": "7",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269631?date=20250503"
+      },
+      {
+        "hour": "10",
+        "minute": "20",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269651?date=20250503"
+      },
+      {
+        "hour": "10",
+        "minute": "35",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269671?date=20250503"
+      },
+      {
+        "hour": "10",
+        "minute": "49",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269691?date=20250503"
+      },
+      {
+        "hour": "11",
+        "minute": "5",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269711?date=20250503"
+      },
+      {
+        "hour": "11",
+        "minute": "20",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269731?date=20250503"
+      },
+      {
+        "hour": "11",
+        "minute": "35",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269751?date=20250503"
+      },
+      {
+        "hour": "11",
+        "minute": "50",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269761?date=20250503"
+      },
+      {
+        "hour": "12",
+        "minute": "5",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269771?date=20250503"
+      },
+      {
+        "hour": "12",
+        "minute": "20",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269781?date=20250503"
+      },
+      {
+        "hour": "12",
+        "minute": "35",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269791?date=20250503"
+      },
+      {
+        "hour": "12",
+        "minute": "50",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269801?date=20250503"
+      },
+      {
+        "hour": "13",
+        "minute": "5",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269811?date=20250503"
+      },
+      {
+        "hour": "13",
+        "minute": "20",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269821?date=20250503"
+      },
+      {
+        "hour": "13",
+        "minute": "35",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269831?date=20250503"
+      },
+      {
+        "hour": "13",
+        "minute": "50",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269841?date=20250503"
+      },
+      {
+        "hour": "14",
+        "minute": "5",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269851?date=20250503"
+      },
+      {
+        "hour": "14",
+        "minute": "20",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269861?date=20250503"
+      },
+      {
+        "hour": "14",
+        "minute": "35",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269871?date=20250503"
+      },
+      {
+        "hour": "14",
+        "minute": "50",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269881?date=20250503"
+      },
+      {
+        "hour": "15",
+        "minute": "5",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269891?date=20250503"
+      },
+      {
+        "hour": "15",
+        "minute": "20",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269901?date=20250503"
+      },
+      {
+        "hour": "15",
+        "minute": "35",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269911?date=20250503"
+      },
+      {
+        "hour": "15",
+        "minute": "50",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269921?date=20250503"
+      },
+      {
+        "hour": "16",
+        "minute": "5",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269931?date=20250503"
+      },
+      {
+        "hour": "16",
+        "minute": "20",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269951?date=20250503"
+      },
+      {
+        "hour": "16",
+        "minute": "38",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269961?date=20250503"
+      },
+      {
+        "hour": "16",
+        "minute": "53",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269971?date=20250503"
+      },
+      {
+        "hour": "17",
+        "minute": "8",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269981?date=20250503"
+      },
+      {
+        "hour": "17",
+        "minute": "23",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/269991?date=20250503"
+      },
+      {
+        "hour": "17",
+        "minute": "38",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270011?date=20250503"
+      },
+      {
+        "hour": "17",
+        "minute": "52",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270031?date=20250503"
+      },
+      {
+        "hour": "18",
+        "minute": "8",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270071?date=20250503"
+      },
+      {
+        "hour": "18",
+        "minute": "23",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270081?date=20250503"
+      },
+      {
+        "hour": "18",
+        "minute": "38",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270101?date=20250503"
+      },
+      {
+        "hour": "18",
+        "minute": "52",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270121?date=20250503"
+      },
+      {
+        "hour": "19",
+        "minute": "9",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270161?date=20250503"
+      },
+      {
+        "hour": "19",
+        "minute": "23",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270171?date=20250503"
+      },
+      {
+        "hour": "19",
+        "minute": "38",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270181?date=20250503"
+      },
+      {
+        "hour": "19",
+        "minute": "53",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270191?date=20250503"
+      },
+      {
+        "hour": "20",
+        "minute": "8",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270231?date=20250503"
+      },
+      {
+        "hour": "20",
+        "minute": "23",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270241?date=20250503"
+      },
+      {
+        "hour": "20",
+        "minute": "38",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270251?date=20250503"
+      },
+      {
+        "hour": "20",
+        "minute": "53",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270261?date=20250503"
+      },
+      {
+        "hour": "21",
+        "minute": "8",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270301?date=20250503"
+      },
+      {
+        "hour": "21",
+        "minute": "23",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270311?date=20250503"
+      },
+      {
+        "hour": "21",
+        "minute": "42",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270331?date=20250503"
+      },
+      {
+        "hour": "22",
+        "minute": "6",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270351?date=20250503"
+      },
+      {
+        "hour": "22",
+        "minute": "27",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270371?date=20250503"
+      },
+      {
+        "hour": "22",
+        "minute": "50",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270391?date=20250503"
+      },
+      {
+        "hour": "23",
+        "minute": "19",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270421?date=20250503"
+      },
+      {
+        "hour": "23",
+        "minute": "48",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270431?date=20250503"
+      },
+      {
+        "hour": "0",
+        "minute": "20",
+        "destination": "久宝寺",
+        "trainType": "",
+        "detailUrl": "https://timetable.jr-odekake.net/train-timetable/270441?date=20250503"
+      }
+    ]
+  }
+}
