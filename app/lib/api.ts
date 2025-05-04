@@ -2,12 +2,10 @@ import * as fs from 'fs'
 import * as path from 'path'
 import { parseJR } from './parsers/jr'
 import { KintetsuParser } from './parsers/kintetsu'
-import {
-  getBusScheduleForDate,
-  kintetsuBusCalendar,
-  kintetsuBusRoutes,
-  parsedBusData
-} from './parsers/kintetsu-bus'
+import { kintetsuBusParser, getBusScheduleForDate } from './parsers/kintetsu-bus';
+import { kintetsuBusCalendar } from './data/kintetsu-bus/calendar'; // Corrected import path
+import { kintetsuBusRoutes } from './data/kintetsu-bus/routes'; // Corrected import path
+import { parsedBusData } from './parsers/kintetsu-bus'
 import { DataCache } from './utils/cache'
 import { loadConfig } from './utils/config'
 
