@@ -1,10 +1,13 @@
 // filepath: /Users/a/Documents/fun/pg/lh/research-kindai/src/api/views.ts
 import { html } from 'hono/html';
+import type { StringBuffer } from 'hono/utils/html';
+// HTMLタイプを定義
+type HtmlEscapedString = { toString(): string };
 
 /**
  * 共通レイアウトのHTMLテンプレート
  */
-export const layout = (title: string, content: string, options: { additionalStyles?: string } = {}) => html`
+export const layout = (title: string, content: string | StringBuffer | HtmlEscapedString | Promise<HtmlEscapedString>, options: { additionalStyles?: string } = {}) => html`
   <!DOCTYPE html>
   <html lang="ja">
   <head>
@@ -84,7 +87,7 @@ export const homePage = () => {
       <li><a href="/view/kintetsu-bus/stop/八戸ノ里駅前">八戸ノ里駅前バス停</a> - バス停の時刻表</li>
     </ul>
   `;
-  
+
   return layout('鉄道・バス時刻表API', content, {
     additionalStyles: `
       .endpoint { margin: 15px 0; padding: 10px; background-color: #f9f9f9; border-radius: 5px; }
@@ -108,51 +111,52 @@ export const errorPage = (title: string, message: string) => {
     </div>
     <p><a href="/">← ホームに戻る</a></p>
   `;
-  
+
   return layout(title, content);
 };
 
 /**
- * 近鉄バスのカレンダーページ用に日付セルを生成
+ * カレンダーの日付セルのHTMLを生成
  */
-export const generateCalendarCellHTML = (
-  dateKey: string, 
-  dayCount: number, 
-  operationType: 'A' | 'B' | null, 
+export function generateCalendarCellHTML(
+  dateKey: string,
+  dayCount: number,
+  operationType: string | undefined,
   isToday: boolean
-) => {
-  let cssClass = '';
+): string {
+  let cellClass = '';
   let operationText = '';
-  
+
   if (operationType === 'A') {
-    cssClass = 'type-a';
-    operationText = 'A';
+    cellClass = 'type-a';
+    operationText = '平日ダイヤ';
   } else if (operationType === 'B') {
-    cssClass = 'type-b';
-    operationText = 'B';
+    cellClass = 'type-b';
+    operationText = '休日ダイヤ';
   } else {
-    cssClass = 'no-operation';
-    operationText = '×';
+    cellClass = 'no-operation';
+    operationText = '運休';
   }
-  
-  // 今日の日付には特別なクラスを適用
+
   if (isToday) {
-    cssClass += ' today';
+    cellClass += ' today';
   }
-  
+
   return `
-    <td class="${cssClass}">
-      <a href="/view/kintetsu-bus/calendar/${dateKey}" title="${dateKey}の運行情報">
-        ${dayCount}<br>${operationText}
+    <td class="${cellClass}">
+      <a href="/view/kintetsu-bus/calendar/${dateKey}" title="${operationText}">
+        ${dayCount}
       </a>
     </td>
   `;
-};
+}
 
 /**
  * 日付選択部分のHTML
  */
 export const dateSelector = (year: number, month: number, day: number, stopName: string) => {
+  const encodedStopName = encodeURIComponent(stopName);
+
   return html`
     <div class="date-selector">
       <label for="year">年:</label>
@@ -164,22 +168,22 @@ export const dateSelector = (year: number, month: number, day: number, stopName:
       <label for="month">月:</label>
       <select id="month">
         ${Array.from({ length: 12 }, (_, i) => i + 1).map(m =>
-          `<option value="${m}" ${m === month ? 'selected' : ''}>${m}</option>`
-        ).join('')}
+    `<option value="${m}" ${m === month ? 'selected' : ''}>${m}</option>`
+  ).join('')}
       </select>
       
       <label for="day">日:</label>
       <select id="day">
         ${Array.from({ length: 31 }, (_, i) => i + 1).map(d =>
-          `<option value="${d}" ${d === day ? 'selected' : ''}>${d}</option>`
-        ).join('')}
+    `<option value="${d}" ${d === day ? 'selected' : ''}>${d}</option>`
+  ).join('')}
       </select>
       
-      <button onclick="goToDate()">表示</button>
+      <button onclick="goToDate('${encodedStopName}')">表示</button>
     </div>
     
     <script>
-      function goToDate() {
+      function goToDate(stopName) {
         const year = document.getElementById('year').value;
         const month = document.getElementById('month').value;
         const day = document.getElementById('day').value;
@@ -189,7 +193,7 @@ export const dateSelector = (year: number, month: number, day: number, stopName:
         const paddedDay = day.length === 1 ? '0' + day : day;
         
         const date = year + '-' + paddedMonth + '-' + paddedDay;
-        window.location.href = "/view/kintetsu-bus/stop/${stopName}?date=" + date;
+        window.location.href = "/view/kintetsu-bus/stop/" + stopName + "?date=" + date;
       }
     </script>
   `;
@@ -204,16 +208,16 @@ export const busCalendarPage = (calendarHTML: string) => {
     <p><a href="/">← ホームに戻る</a></p>
     
     <div class="legend">
-      <span><span class="legend-color" style="background-color: #e6f7ff;"></span>運行日（A）: 平日ダイヤ</span>
-      <span><span class="legend-color" style="background-color: #fff7e6;"></span>運行日（B）: 土曜・休日ダイヤ</span>
-      <span><span class="legend-color" style="background-color: #f5f5f5;"></span>×: 運休</span>
+      <span><span class="legend-color type-a"></span>運行日（A）: 平日ダイヤ</span>
+      <span><span class="legend-color type-b"></span>運行日（B）: 土曜・休日ダイヤ</span>
+      <span><span class="legend-color no-operation"></span>休業日: 運行なし</span>
     </div>
     
     <div class="calendar-container">
       ${calendarHTML}
     </div>
   `;
-  
+
   return layout('近鉄バス運行カレンダー', content, {
     additionalStyles: `
       .container { max-width: 1200px; }
@@ -222,13 +226,20 @@ export const busCalendarPage = (calendarHTML: string) => {
       table { width: 100%; border-collapse: collapse; }
       th, td { text-align: center; padding: 5px; border: 1px solid #ddd; }
       th { background-color: #f5f5f5; }
-      .no-operation { background-color: #f5f5f5; color: #999; }
+      .type-a { background-color: #e6f7ff; }
+      .type-b { background-color: #fff7e6; }
+      .no-operation { background-color: #ffe6e6; color: #cc0000; }
       .today { border: 2px solid #ff4d4f; font-weight: bold; }
       .legend { margin: 20px 0; padding: 10px; background-color: #f9f9f9; border-radius: 5px; }
       .legend span { display: inline-block; margin-right: 15px; }
-      .legend-color { display: inline-block; width: 15px; height: 15px; margin-right: 5px; vertical-align: middle; }
+      .legend-color { display: inline-block; width: 15px; height: 15px; margin-right: 5px; vertical-align: middle; border-radius: 3px; }
       a { color: inherit; text-decoration: none; }
       a:hover { text-decoration: underline; }
+      
+      /* 凡例の色を設定 */
+      .legend-color.type-a { background-color: #e6f7ff; }
+      .legend-color.type-b { background-color: #fff7e6; }
+      .legend-color.no-operation { background-color: #ffe6e6; }
     `
   });
 };
@@ -246,7 +257,7 @@ export const busDayCalendarPage = (date: string, contentHTML: string) => {
     
     ${contentHTML}
   `;
-  
+
   return layout(`${date} 近鉄バス運行情報`, content, {
     additionalStyles: `
       .container { max-width: 1200px; }
@@ -272,7 +283,7 @@ export const busAllDataPage = (stopsListHTML: string, routesInfoHTML: string) =>
     <h2>路線情報</h2>
     ${routesInfoHTML}
   `;
-  
+
   return layout('近鉄バス時刻表', content, {
     additionalStyles: `
       .container { max-width: 1200px; }
@@ -288,10 +299,10 @@ export const busAllDataPage = (stopsListHTML: string, routesInfoHTML: string) =>
  * バス停の時刻表ページのHTML
  */
 export const busStopPage = (
-  stopName: string, 
-  year: number, 
-  month: number, 
-  day: number, 
+  stopName: string,
+  year: number,
+  month: number,
+  day: number,
   dayOfWeekJP: string,
   operationType: 'A' | 'B',
   routeName: string,
@@ -338,7 +349,7 @@ export const busStopPage = (
     
     <p>※道路状況によりバスの到着が遅れることがございますので、ご了承くださいますようお願い申し上げます。</p>
   `;
-  
+
   return layout(`${stopName} - バス時刻表`, content, {
     additionalStyles: `
       .container { max-width: 800px; }
@@ -358,15 +369,25 @@ export const busNoOperationPage = (stopName: string, year: number, month: number
   const content = html`
     <h1>${stopName} バス時刻表</h1>
     <p>${year}年${month}月${day}日(${dayOfWeekJP})</p>
-    <div class="alert alert-info">
-      <p>この日は運行していません。</p>
+    <div class="alert alert-warning">
+      <h2>本日は運行していません</h2>
+      <p>近鉄バスは${year}年${month}月${day}日(${dayOfWeekJP})は休業日のため運行していません。</p>
+      <p>他の日付の時刻表を確認するには、以下のリンクをご利用ください。</p>
     </div>
+    
+    <!-- 日付選択 -->
+    ${dateSelector(year, month, day, stopName)}
+    
     <p><a href="/">← ホームに戻る</a> | <a href="/view/kintetsu-bus/calendar">運行カレンダーを見る</a></p>
   `;
-  
-  return layout(`${stopName} - バス時刻表`, content, {
+
+  return layout(`${stopName} - バス時刻表（運行なし）`, content, {
     additionalStyles: `
       .container { max-width: 800px; }
+      .alert-warning { background-color: #fff3cd; border: 1px solid #ffecb5; color: #856404; }
+      .date-selector { margin: 20px 0; padding: 15px; background-color: #f8f9fa; border-radius: 5px; }
+      .date-selector select { padding: 5px; margin-right: 10px; }
+      .date-selector button { padding: 5px 10px; background-color: #0066cc; color: white; border: none; border-radius: 3px; cursor: pointer; }
     `
   });
 };
