@@ -1,7 +1,7 @@
 // filepath: /Users/a/Documents/fun/pg/lh/research-kindai/src/parsers/kintetsu-bus.ts
-import { ParserResult } from '../types';
 import { kintetsuBusCalendar } from '../data/kintetsu-bus/calendar';
 import { kintetsuBusRoutes } from '../data/kintetsu-bus/routes';
+import { ParserResult } from '../types';
 
 // カレンダータイプの定義（A:平日、B:休日、null:運休）
 export interface BusCalendar {
