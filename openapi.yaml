@@ -234,3 +234,41 @@ paths:
                   message:
                     type: string
                     example: 'キャッシュ "kintetsu" をクリアしました'
+
+  /api/delay:
+    get:
+      summary: 遅延情報を取得
+      description: 近鉄およびJRの遅延情報を取得します。現時点では近鉄情報のみを返します。
+      responses:
+        '200':
+          description: 成功レスポンス
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  kintetsu:
+                    type: object
+                    properties:
+                      servertime:
+                        type: string
+                        description: サーバー時刻（現在時刻）
+                        example: '2025年5月4日 21:51現在'
+                      status:
+                        type: string
+                        description: 遅延情報メッセージ
+                        example: '現在は１５分以上の列車の遅れはございません。'
+                  jr:
+                    type: object
+                    description: JRの遅延情報（未実装時は null）
+                    nullable: true
+        '500':
+          description: サーバーエラー
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: '遅延情報の取得に失敗しました'

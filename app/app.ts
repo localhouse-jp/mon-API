@@ -75,6 +75,7 @@ import * as apiKintetsu from './routes/api/kintetsu'
 import * as apiKintetsuBus from './routes/api/kintetsu-bus'
 import * as apiKintetsuBusCalendarDate from './routes/api/kintetsu-bus/calendar/[date]'
 import * as apiKintetsuBusStopName from './routes/api/kintetsu-bus/stop/[stopName]'
+import * as apiDelay from './routes/api/delay'
 
 // APIルートを登録
 app.get('/api/all', apiAll.GET)
@@ -84,6 +85,7 @@ app.get('/api/kintetsu-bus', apiKintetsuBus.GET)
 app.get('/api/kintetsu-bus/calendar/:date', apiKintetsuBusCalendarDate.GET)
 app.get('/api/kintetsu-bus/stop/:stopName', apiKintetsuBusStopName.GET)
 app.post('/api/cache/clear', apiCacheClear.POST)
+app.get('/api/delay', apiDelay.GET)
 
 // 静的ファイルの提供
 app.use('/static/*', serveStatic({ root: './public' }))
