@@ -148,7 +148,7 @@ export const kintetsuBusRoutes: BusRoute[] = [
     name: "76 中央環状線（八戸ノ里駅前方面）", // 路線名（方面を明記）
     stops: [
       {
-        stopName: "中央環状線上のバス停", // 仮のバス停名 - HTMLから特定できないため
+        stopName: "東上小阪",
         schedule: {
           // 平日・休日共通のスケジュール
           A: [
