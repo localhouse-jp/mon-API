@@ -19,8 +19,26 @@ export const GET = async (c) => {
       } else {
         servertime = $('#servertime').text().trim()
       }
-      const status = $('font[size="+1"]').text().trim()
-      return { kintetsu: { servertime, status }, jr: null }
+      const statusMsg = $('font[size="+1"]').text().trim()
+      if (statusMsg) {
+        return { kintetsu: { servertime, status: statusMsg }, jr: null }
+      }
+      const disruptions: Array<{ route: string; status: string; cause: string; detailUrl: string }> = []
+      const table = $('table[style*="border-collapse"]').first()
+      table.find('tbody tr').each((_, row) => {
+        const tds = $(row).find('td')
+        if (tds.length >= 4) {
+          const route = tds.eq(0).text().trim()
+          const stat = tds.eq(1).text().trim()
+          const cause = tds.eq(2).text().trim()
+          const onclick = tds.eq(3).find('input[onclick]').attr('onclick') || ''
+          const match = onclick.match(/window\.open\(['"](.+?)['"]/)
+          const detailPath = match ? match[1] : ''
+          const detailUrl = detailPath ? new URL(detailPath, 'https://www.kintetsu.jp/unkou/unkou.html').toString() : ''
+          disruptions.push({ route, status: stat, cause, detailUrl })
+        }
+      })
+      return { kintetsu: { servertime, disruptions }, jr: null }
     })
     return c.json(data)
   } catch (error) {

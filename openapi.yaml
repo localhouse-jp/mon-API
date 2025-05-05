@@ -258,6 +258,20 @@ paths:
                         type: string
                         description: 遅延情報メッセージ
                         example: '現在は１５分以上の列車の遅れはございません。'
+                      disruptions:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            route:
+                              type: string
+                            status:
+                              type: string
+                            cause:
+                              type: string
+                            detailUrl:
+                              type: string
+                    description: 正常時は `status`、運休・遅延発生時は `disruptions` を返します
                   jr:
                     type: object
                     description: JRの遅延情報（未実装時は null）
