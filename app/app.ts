@@ -70,12 +70,12 @@ app.get('/view/kintetsu-bus/calendar', (c) => {
 // APIエンドポイントの登録
 import * as apiAll from './routes/api/all'
 import * as apiCacheClear from './routes/api/cache/clear'
+import * as apiDelay from './routes/api/delay'
 import * as apiJr from './routes/api/jr'
 import * as apiKintetsu from './routes/api/kintetsu'
 import * as apiKintetsuBus from './routes/api/kintetsu-bus'
 import * as apiKintetsuBusCalendarDate from './routes/api/kintetsu-bus/calendar/[date]'
 import * as apiKintetsuBusStopName from './routes/api/kintetsu-bus/stop/[stopName]'
-import * as apiDelay from './routes/api/delay'
 
 // APIルートを登録
 app.get('/api/all', apiAll.GET)

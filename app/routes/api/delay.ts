@@ -15,7 +15,7 @@ export const GET = async (c) => {
       let servertime = ''
       if (dateHeader) {
         const sd = new Date(dateHeader)
-        servertime = `${sd.getFullYear()}年${sd.getMonth()+1}月${sd.getDate()}日 ${sd.getHours()}:${sd.getMinutes().toString().padStart(2,'0')}現在`
+        servertime = `${sd.getFullYear()}年${sd.getMonth() + 1}月${sd.getDate()}日 ${sd.getHours()}:${sd.getMinutes().toString().padStart(2, '0')}現在`
       } else {
         servertime = $('#servertime').text().trim()
       }
