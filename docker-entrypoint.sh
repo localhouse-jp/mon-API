@@ -12,5 +12,5 @@ if [ -n "$DISABLE_API" ] && [ "$DISABLE_API" != "false" ]; then
 else
   echo "APIを起動します..."
   # 通常のアプリケーション起動コマンド
-  exec bun run start
+  exec bun run dist/server.js
 fi

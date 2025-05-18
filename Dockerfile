@@ -45,7 +45,7 @@ ARG DISABLE_API
 ENV DISABLE_API=${DISABLE_API}
 
 RUN if [ "$DISABLE_API" = "true" ]; then \
-        echo "API is disabled. Skipping API-related setup."; \
-    else \
-        echo "API is enabled. Proceeding with API-related setup."; \
-    fi
+  echo "API is disabled. Skipping API-related setup."; \
+  else \
+  echo "API is enabled. Proceeding with API-related setup."; \
+  fi
