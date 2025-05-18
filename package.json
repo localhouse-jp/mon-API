@@ -15,7 +15,8 @@
     "debug": "DEBUG_MODE=true bun run app/server.ts",
     "debug:dev": "DEBUG_MODE=true bun --watch run app/server.ts",
     "vite-dev": "vite --host",
-    "build": "vite build"
+    "build": "bun build app/server.ts --target node --outdir dist",
+    "vite-build": "vite build"
   },
   "devDependencies": {
     "@hono/vite-dev-server": "^0.19.0",
