@@ -22,9 +22,11 @@ WORKDIR /app
 # ビルドステージから必要なファイルをコピー
 COPY --from=builder /app/package.json /app/bun.lock ./
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/app ./app
-COPY --from=builder /app/config.json ./
 COPY --from=builder /app/openapi.yaml ./
+COPY --from=builder /app/config.json ./
+
+# tmp/cacheディレクトリを作成
+RUN mkdir -p tmp/cache
 
 # 本番環境向けに依存関係をインストール（開発用依存関係はスキップ）
 RUN bun install --production --frozen-lockfile
@@ -33,4 +35,4 @@ RUN bun install --production --frozen-lockfile
 EXPOSE 3000
 
 # コンテナ起動時に実行されるコマンド
-CMD ["bun", "run", "start"]
+CMD ["bun", "run", "dist/server.js"]
