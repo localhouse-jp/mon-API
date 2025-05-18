@@ -1,0 +1,26 @@
+# Git関連
+.git
+.gitignore
+
+# Node/Bun関連
+node_modules
+npm-debug.log
+bun-debug.log
+
+# ビルド成果物
+dist
+
+# キャッシュ
+tmp
+.cache
+
+# エディタ設定
+.vscode
+.idea
+*.swp
+*.swo
+
+# その他
+*.log
+.DS_Store
+README.md
