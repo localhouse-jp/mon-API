@@ -33,5 +33,19 @@ RUN bun install --production --frozen-lockfile
 # アプリケーションがリッスンするポート
 EXPOSE 3000
 
+# スタートアップスクリプトを追加
+COPY --from=builder /app/docker-entrypoint.sh /app/docker-entrypoint.sh
+RUN chmod +x /app/docker-entrypoint.sh
+
 # コンテナ起動時に実行されるコマンド
-CMD ["bun", "run", "dist/server.js"]
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
+
+# DISABLE_API 環境変数のチェック
+ARG DISABLE_API
+ENV DISABLE_API=${DISABLE_API}
+
+RUN if [ "$DISABLE_API" = "true" ]; then \
+        echo "API is disabled. Skipping API-related setup."; \
+    else \
+        echo "API is enabled. Proceeding with API-related setup."; \
+    fi
