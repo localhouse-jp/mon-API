@@ -1,48 +1,22 @@
 import * as fs from 'fs';
-import * as path from 'path';
-import { fileURLToPath } from 'url';
 
-// ESモジュールでも__dirnameを使えるようにするためのヘルパー関数
-const getDirname = () => {
-  try {
-    // ESモジュール環境では import.meta.url を使用
-    return path.dirname(fileURLToPath(import.meta.url));
-  } catch (e) {
-    // CommonJS環境ではプロジェクトルートからの相対パスを返す
-    return path.resolve('.');
-  }
+// 設定を直接コードとして定義
+export const CONFIG = {
+  parsers: [
+    {
+      name: 'kintetsu',
+      urls: [
+        'https://eki.kintetsu.co.jp/norikae/T5?USR=PC&slCode=356-5&d=1&dw=0',
+        'https://eki.kintetsu.co.jp/norikae/T5?USR=PC&slCode=350-8&d=1&dw=0'
+      ]
+    }
+  ],
+  outputDir: './dist'
 };
 
 export function loadConfig() {
-  try {
-    // srcディレクトリ参照を削除し、プロジェクトルートのconfig.jsonを参照
-    const configPath = path.join(getDirname(), '../../../config.json');
-    if (fs.existsSync(configPath)) {
-      const configData = fs.readFileSync(configPath, 'utf-8');
-      return JSON.parse(configData);
-    } else {
-      // 設定ファイルが存在しない場合、デフォルト設定を返す
-      return {
-        outputDir: './dist',
-        parsers: [
-          {
-            name: 'JR',
-            urls: []
-          },
-          {
-            name: 'Kintetsu',
-            urls: []
-          }
-        ]
-      };
-    }
-  } catch (error) {
-    console.error('設定ファイルの読み込みに失敗しました:', error);
-    return {
-      outputDir: './dist',
-      parsers: []
-    };
-  }
+  // 設定を直接返す（外部ファイルに依存せず）
+  return CONFIG;
 }
 
 export function ensureDirectoryExists(dirPath: string) {

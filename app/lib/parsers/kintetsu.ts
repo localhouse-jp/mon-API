@@ -7,14 +7,42 @@ export class KintetsuParser implements TimetableParser {
 
   async parseUrls(urls: string[]): Promise<ParserResult> {
     const result: ParserResult = {};
+
+    if (!urls || urls.length === 0) {
+      console.error('近鉄パーサー: URLが指定されていません');
+      return result;
+    }
+
+    console.log(`近鉄時刻表の取得を開始します (${urls.length} URLs)`);
+
     for (const urlStr of urls) {
       try {
+        console.log(`URLからデータを取得しています: ${urlStr}`);
         const { stationName, timetables } = await this.fetchStationTimetable(urlStr);
+
+        if (!stationName) {
+          console.error(`駅名が取得できませんでした: ${urlStr}`);
+          continue;
+        }
+
         result[stationName] = timetables;
+        console.log(`駅のデータを取得しました: ${stationName}, 方向数: ${Object.keys(timetables).length}`);
       } catch (err) {
-        console.error(`Error fetching ${urlStr}:`, err);
+        console.error(`URLからのデータ取得中にエラーが発生しました ${urlStr}:`, err);
+        if (err instanceof Error) {
+          console.error(`エラーの詳細: ${err.message}`);
+          console.error(`スタックトレース: ${err.stack}`);
+        }
       }
     }
+
+    const stationCount = Object.keys(result).length;
+    if (stationCount === 0) {
+      console.error('近鉄時刻表データの取得に失敗しました。駅データがありません。');
+    } else {
+      console.log(`近鉄時刻表の取得が完了しました。駅数: ${stationCount}`);
+    }
+
     return result;
   }
 
@@ -33,40 +61,55 @@ export class KintetsuParser implements TimetableParser {
     sp.set('dmode', 'detail');
     sp.set('pFlg', '0');
 
-    console.debug(`→ fetchDirection: slCode=${slCode}, d=${d}, dw=${dw}`);
-    const res = await fetch(url.toString(), {
-      headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ja' }
-    });
-    console.debug(`  status: ${res.status}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    console.log(`方向データを取得中: slCode=${slCode}, d=${d}, dw=${dw} (${dw === '0' ? '平日' : '休日'})`);
 
-    const buf = Buffer.from(await res.arrayBuffer());
-    const html = iconv.decode(buf, 'shift_jis');
-    const $ = cheerio.load(html);
-
-    const hdr = $('#kstimetable .title h3').text().trim();
-    console.debug(`  raw header: ${hdr}`);
-    const m = hdr.match(/^(.+?方面)/);
-    const directionName = m ? m[1] : hdr;
-    console.debug(`  directionName: ${directionName}`);
-
-    const entries: TimetableEntry[] = [];
-    $('#kstimetable table tr').each((_, row) => {
-      const hour = $(row).find('th').first().text().trim();
-      if (!/^\d+$/.test(hour)) return;
-      $(row).find('div.k_1901 a').each((_, aTag) => {
-        const $a = $(aTag);
-        const minute = $a.find('span').text().trim();
-        const href = $a.attr('href') || '';
-        const detailUrl = new URL(href, url.toString()).toString();
-        const [destination = '', trainType = ''] = $a.clone()
-          .children('br').remove().end()
-          .text().replace(/\s+/g, ' ').trim().split(' ');
-        entries.push({ hour, minute, destination, trainType, detailUrl });
+    try {
+      const res = await fetch(url.toString(), {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+          'Accept-Language': 'ja,en-US;q=0.9,en;q=0.8'
+        }
       });
-    });
-    console.debug(`  parsed entries: ${entries.length}`);
-    return { directionName, entries };
+
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status} - ${res.statusText}`);
+      }
+
+      const buf = Buffer.from(await res.arrayBuffer());
+      const html = iconv.decode(buf, 'shift_jis');
+      const $ = cheerio.load(html);
+
+      const hdr = $('#kstimetable .title h3').text().trim();
+      const m = hdr.match(/^(.+?方面)/);
+      const directionName = m ? m[1] : hdr;
+
+      if (!directionName) {
+        console.warn('方面名が取得できませんでした。HTMLの構造が変更された可能性があります。');
+      }
+
+      const entries: TimetableEntry[] = [];
+      $('#kstimetable table tr').each((_, row) => {
+        const hour = $(row).find('th').first().text().trim();
+        if (!/^\d+$/.test(hour)) return;
+        $(row).find('div.k_1901 a').each((_, aTag) => {
+          const $a = $(aTag);
+          const minute = $a.find('span').text().trim();
+          const href = $a.attr('href') || '';
+          const detailUrl = new URL(href, url.toString()).toString();
+          const [destination = '', trainType = ''] = $a.clone()
+            .children('br').remove().end()
+            .text().replace(/\s+/g, ' ').trim().split(' ');
+          entries.push({ hour, minute, destination, trainType, detailUrl });
+        });
+      });
+
+      console.log(`方向「${directionName}」(${dw === '0' ? '平日' : '休日'})のエントリ取得完了: ${entries.length}件`);
+      return { directionName, entries };
+    } catch (error) {
+      console.error(`方向データの取得中にエラーが発生しました:`, error);
+      // エラーが発生した場合でも空のデータを返して処理を続行
+      return { directionName: '', entries: [] };
+    }
   }
 
   private async fetchStationTimetable(

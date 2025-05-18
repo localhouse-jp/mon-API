@@ -23,10 +23,9 @@ WORKDIR /app
 COPY --from=builder /app/package.json /app/bun.lock ./
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/openapi.yaml ./
-COPY --from=builder /app/config.json ./
 
-# tmp/cacheディレクトリを作成
-RUN mkdir -p tmp/cache
+# 必要なディレクトリを作成
+RUN mkdir -p tmp/cache public
 
 # 本番環境向けに依存関係をインストール（開発用依存関係はスキップ）
 RUN bun install --production --frozen-lockfile

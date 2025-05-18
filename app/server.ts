@@ -25,13 +25,27 @@ if (fs.existsSync('./public')) {
   app.use('/static/*', serveStatic({ root: './public' }))
 }
 
-// データの初期化処理を実行
-initData()
-
 const port = process.env.PORT || 3000
-console.log(`サーバーを起動します：http://localhost:${port}`)
 
-serve({
-  fetch: app.fetch,
-  port: Number(port)
-})
+// サーバーの起動とデータ初期化を行う関数
+async function startServer() {
+  try {
+    // データの初期化処理を実行し、待機する
+    console.log('データ初期化を開始します...')
+    await initData()
+    console.log('データ初期化が完了しました')
+
+    // サーバーを起動
+    console.log(`サーバーを起動します：http://localhost:${port}`)
+    serve({
+      fetch: app.fetch,
+      port: Number(port)
+    })
+  } catch (error) {
+    console.error('サーバー起動中にエラーが発生しました:', error)
+    process.exit(1)
+  }
+}
+
+// サーバーを起動
+startServer()
