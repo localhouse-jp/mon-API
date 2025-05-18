@@ -47,14 +47,14 @@ export default function DateSelector({ year, month, day, stopName, extraQueryPar
       <label for="month">月:</label>
       <select id="month">
         {Array.from({ length: 12 }, (_, i) => i + 1).map(m => (
-          <option value={String(m)} selected={m === month}>{m}</option>
+          <option key={m} value={String(m)} selected={m === month}>{m}</option>
         ))}
       </select>
 
       <label for="day">日:</label>
       <select id="day">
         {Array.from({ length: 31 }, (_, i) => i + 1).map(d => (
-          <option value={String(d)} selected={d === day}>{d}</option>
+          <option key={d} value={String(d)} selected={d === day}>{d}</option>
         ))}
       </select>
 
