@@ -121,7 +121,7 @@ export function parseDate(dateString: string): Date {
 }
 
 // 特定の日の運行スケジュールを取得する関数
-export function getBusScheduleForDate(dateString: string, stopName?: string): any {
+export function getBusScheduleForDate(dateString: string, stopName?: string): BusScheduleResult {
   let date: Date;
 
   // 日付形式を確認して適切に処理
