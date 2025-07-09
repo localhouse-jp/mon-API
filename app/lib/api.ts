@@ -5,6 +5,7 @@ import { kintetsuBusRoutes } from './data/kintetsu-bus/routes'; // Corrected imp
 import { parseJR } from './parsers/jr';
 import { KintetsuParser } from './parsers/kintetsu';
 import { getBusScheduleForDate, parsedBusData } from './parsers/kintetsu-bus';
+import { parsedBusData as parsedOsakaBusData } from './parsers/osaka-bus';
 import { DataCache } from './utils/cache';
 import { loadConfig } from './utils/config';
 
@@ -167,16 +168,18 @@ export async function getKintetsuData() {
  * すべての鉄道・バスデータを取得する
  */
 export async function getAllData() {
-  const [kintetsu, jr, kintetsuBus] = await Promise.all([
+  const [kintetsu, jr, kintetsuBus, osakaBus] = await Promise.all([
     getKintetsuData(),
     getJRData(),
-    parsedBusData
+    parsedBusData,
+    parsedOsakaBusData
   ])
 
   return {
     kintetsu,
     jr,
     kintetsuBus,
+    osakaBus,
     lastUpdated: new Date().toISOString()
   }
 }
