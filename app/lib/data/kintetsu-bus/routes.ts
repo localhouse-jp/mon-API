@@ -144,35 +144,4 @@ export const kintetsuBusRoutes: BusRoute[] = [
       }
     ]
   },
-  {
-    name: "76 中央環状線（八戸ノ里駅前方面）", // 路線名（方面を明記）
-    stops: [
-      {
-        stopName: "東上小阪",
-        schedule: {
-          // 平日・休日共通のスケジュール
-          A: [
-            { hour: 7, minutes: [4, 45] },
-            { hour: 8, minutes: [28] },
-            { hour: 9, minutes: [8, 52] },
-            { hour: 10, minutes: [33] },
-            { hour: 16, minutes: [9, 49] },
-            { hour: 17, minutes: [39] },
-            { hour: 18, minutes: [29] },
-            { hour: 19, minutes: [9] },
-          ],
-          B: [ // 平日と同じデータを休日に設定
-            { hour: 7, minutes: [4, 45] },
-            { hour: 8, minutes: [28] },
-            { hour: 9, minutes: [8, 52] },
-            { hour: 10, minutes: [33] },
-            { hour: 16, minutes: [9, 49] },
-            { hour: 17, minutes: [39] },
-            { hour: 18, minutes: [29] },
-            { hour: 19, minutes: [9] },
-          ],
-        },
-      },
-    ],
-  },
 ];
