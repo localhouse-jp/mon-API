@@ -15,7 +15,22 @@ export const GET = async (c) => {
       let servertime = ''
       if (dateHeader) {
         const sd = new Date(dateHeader)
-        servertime = `${sd.getFullYear()}年${sd.getMonth() + 1}月${sd.getDate()}日 ${sd.getHours()}:${sd.getMinutes().toString().padStart(2, '0')}現在`
+        const formatter = new Intl.DateTimeFormat('ja-JP', {
+          timeZone: 'Asia/Tokyo',
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit',
+        })
+        const parts = formatter.formatToParts(sd)
+        const year = parts.find(p => p.type === 'year')?.value
+        const month = parts.find(p => p.type === 'month')?.value
+        const day = parts.find(p => p.type === 'day')?.value
+        const hour = parts.find(p => p.type === 'hour')?.value
+        const minute = parts.find(p => p.type === 'minute')?.value
+        
+        servertime = `${year}年${month}月${day}日 ${hour}:${minute}現在`
       } else {
         servertime = $('#servertime').text().trim()
       }
@@ -49,7 +64,22 @@ export const GET = async (c) => {
       let jrServertime = ''
       if (dateHeader2) {
         const sd2 = new Date(dateHeader2)
-        jrServertime = `${sd2.getFullYear()}年${sd2.getMonth() + 1}月${sd2.getDate()}日 ${sd2.getHours()}:${sd2.getMinutes().toString().padStart(2, '0')}現在`
+        const formatter = new Intl.DateTimeFormat('ja-JP', {
+          timeZone: 'Asia/Tokyo',
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit',
+        })
+        const parts = formatter.formatToParts(sd2)
+        const year = parts.find(p => p.type === 'year')?.value
+        const month = parts.find(p => p.type === 'month')?.value
+        const day = parts.find(p => p.type === 'day')?.value
+        const hour = parts.find(p => p.type === 'hour')?.value
+        const minute = parts.find(p => p.type === 'minute')?.value
+        
+        jrServertime = `${year}年${month}月${day}日 ${hour}:${minute}現在`
       } else {
         jrServertime = $jr('#servertime').text().trim()
       }
