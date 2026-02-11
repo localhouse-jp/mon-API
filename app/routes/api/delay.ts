@@ -20,6 +20,10 @@ function formatDateToJST(date: Date): string {
   const hour = parts.find(p => p.type === 'hour')?.value
   const minute = parts.find(p => p.type === 'minute')?.value
   
+  if (!year || !month || !day || !hour || !minute) {
+    throw new Error('Failed to format date to JST')
+  }
+  
   return `${year}年${month}月${day}日 ${hour}:${minute}現在`
 }
 
