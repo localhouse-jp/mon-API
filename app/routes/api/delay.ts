@@ -4,6 +4,29 @@ import { DataCache } from '../../lib/utils/cache'
 
 const delayCache = new DataCache(10 * 60 * 1000)
 
+function formatDateToJST(date: Date): string {
+  const formatter = new Intl.DateTimeFormat('ja-JP', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  })
+  const parts = formatter.formatToParts(date)
+  const year = parts.find(p => p.type === 'year')?.value
+  const month = parts.find(p => p.type === 'month')?.value
+  const day = parts.find(p => p.type === 'day')?.value
+  const hour = parts.find(p => p.type === 'hour')?.value
+  const minute = parts.find(p => p.type === 'minute')?.value
+  
+  if (!year || !month || !day || !hour || !minute) {
+    throw new Error('Failed to format date to JST')
+  }
+  
+  return `${year}年${month}月${day}日 ${hour}:${minute}現在`
+}
+
 export const GET = async (c) => {
   try {
     const data = await delayCache.get('delay', async () => {
@@ -14,8 +37,7 @@ export const GET = async (c) => {
       const $ = cheerio.load(html)
       let servertime = ''
       if (dateHeader) {
-        const sd = new Date(dateHeader)
-        servertime = `${sd.getFullYear()}年${sd.getMonth() + 1}月${sd.getDate()}日 ${sd.getHours()}:${sd.getMinutes().toString().padStart(2, '0')}現在`
+        servertime = formatDateToJST(new Date(dateHeader))
       } else {
         servertime = $('#servertime').text().trim()
       }
@@ -48,8 +70,7 @@ export const GET = async (c) => {
       const $jr = cheerio.load(jrHtml)
       let jrServertime = ''
       if (dateHeader2) {
-        const sd2 = new Date(dateHeader2)
-        jrServertime = `${sd2.getFullYear()}年${sd2.getMonth() + 1}月${sd2.getDate()}日 ${sd2.getHours()}:${sd2.getMinutes().toString().padStart(2, '0')}現在`
+        jrServertime = formatDateToJST(new Date(dateHeader2))
       } else {
         jrServertime = $jr('#servertime').text().trim()
       }
